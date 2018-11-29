@@ -1,0 +1,22 @@
+[
+  {
+    "name" : "home",
+    "_key" : "nav.home",
+    "ref" : "#"
+  },
+  {
+    "name" : "install",
+    "_key" : "nav.install",
+    "ref" : "#"
+  },
+  {
+    "name" : "documentation",
+    "_key" : "nav.doc",
+    "ref" : "#"
+  },
+  {
+    "name" : "array.io",
+    "_key" : false,
+    "ref" : "#"
+  }
+]

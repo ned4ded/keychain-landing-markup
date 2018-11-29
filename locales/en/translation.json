@@ -1,0 +1,46 @@
+{
+  "nav" : {
+    "home" : "home",
+    "install": "install",
+    "doc": "documentation"
+  },
+  "features" : {
+    "indep" : {
+      "name" : "independent",
+      "descr" : "a standalone application to interact with your private keys"
+    },
+    "secure" : {
+      "name" : "secure",
+      "descr" : "store your private keys encrypted by AES256 algorithm in the files with privileged access"
+    },
+    "isolated" : {
+      "name" : "isolated",
+      "descr" : "keep your keys in an isolated environment from your browser, DApp and the local storage"
+    },
+    "friend" : {
+      "name" : "friendly",
+      "descr" : "the Keychain API easily integrates with any project no matter what language you choose for development"
+    }
+  },
+  "jumbotron": {
+    "heading" : "an open-source desktop application to manage your private keys",
+    "features" : {
+      "control" : "complete control over the sensitive information",
+      "vault" : "a vault which never transmits sensitive data",
+      "storage" : "local host storage of the keys to interact with the project"
+    }
+  },
+  "pages" : {
+    "home" : {
+      "headings" : {
+        "features": "key features"
+      },
+      "paragraphs" : {
+        "about" : "<b>KeyChain</b> is a standalone app for signing transactions and generating key pairs. It stores private keys in an isolated environment where no logger, debugger or spyware can intercept them because of the three-layer security protecting each action of the system. KeyChain supports transactions from and to various blockchains, including Ethereum and Ethereum classic, Litecoin, Bitcoin, and Bitshares."
+      }
+    }
+  },
+  "util" : {
+    "download" : "download"
+  }
+}

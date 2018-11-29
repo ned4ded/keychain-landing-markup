@@ -1,0 +1,29 @@
+{% set nav = datasets.get('site-map') %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+
+      <nav class="navbar navbar--header">
+        <a href="/" class="brand navbar__brand">
+          <img src="assets/imgs/kch-brand-logo.png" alt="Keychain Logotype" width="375" height="144">
+        </a>
+
+        <ul class="navbar__nav">
+          {% for item in nav %}
+          <li class="navbar__nav-item">
+            <a href="{{ item.ref }}" class="navbar__link{{ ' navbar__link--active' if page === item.name }}">
+              {% if item._key %}
+              {{ item._key | __ | capitalizeFirst }}
+              {% else %}
+              {{ item.name | capitalizeFirst }}
+              {% endif %}
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+      </nav>
+
+    </div>
+  </div>
+</div>

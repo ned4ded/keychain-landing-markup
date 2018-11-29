@@ -1,0 +1,22 @@
+[
+  {
+    "name" : "independent",
+    "_name" : "features.indep.name",
+    "_descr" : "features.indep.descr"
+  },
+  {
+    "name" : "secure",
+    "_name" : "features.secure.name",
+    "_descr" : "features.secure.descr"
+  },
+  {
+    "name" : "isolated",
+    "_name" : "features.isolated.name",
+    "_descr" : "features.isolated.descr"
+  },
+  {
+    "name" : "friendly",
+    "_name" : "features.friend.name",
+    "_descr" : "features.friend.descr"
+  }
+]

@@ -1,0 +1,11 @@
+{% import "lib/helpers.njk" as helpers %}
+
+{% macro make(item, classes) %}
+<div class="feature{{ helpers.parse(classes) }}">
+  <span class="feature__icon{{ 'feature__icon--' + item.name}}"></span>
+
+  <p class="feature__name">{{ item._name | __ | capitalize }}</p>
+
+  <p class="feature__descr">{{ item._descr | __ | capitalizeFirst }}</p>
+</div>
+{% endmacro %}

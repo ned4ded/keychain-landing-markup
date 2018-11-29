@@ -1,0 +1,113 @@
+.jumbotron {
+  overflow: hidden;
+
+  padding-bottom: 110px;
+  background-image: linear-gradient(333deg, lighten(theme-color(), 5%), theme-color());
+
+  @include bp-up(xl) {
+    background-image: url('../assets/imgs/jumbotron-bg-main-part.png'), url('../assets/imgs/jumbotron-bg-subpart.png');
+    background-repeat: no-repeat;
+    background-position: 33% 0, 100% 100%;
+    background-size: auto;
+  }
+
+  @include bp-up(2xl) {
+    min-height: 968px;
+    padding-top: 8px;
+  }
+
+  &__block {
+    &--about {
+      padding-top: spacer(4);
+
+      @include bp-up(2xl) {
+        padding-top: 155px;
+      }
+    }
+
+    &--windows {
+      position: relative;
+
+      height: 100%;
+
+      display: none;
+
+      @include bp-up(xl) {
+        display: block;
+      }
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+
+    &--download {
+      margin-top: spacer(6);
+
+      text-align: center;
+
+      @include bp-up(xl) {
+        margin-top: 210px;
+
+        text-align: right;
+      }
+    }
+  }
+
+  &__heading {
+    margin-bottom: 50px;
+
+    line-height: 1.33;
+
+    @include bp-up(xl) {
+      max-width: 590px;
+    };
+  }
+
+  &__download {
+    width: 350px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+
+    font-size: $font-size-lg;
+  }
+
+  &__features {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    li {
+      position: relative;
+
+      padding-left: 28px;
+
+      color: $white;
+
+      font-size: $font-size-lg;
+
+      &:before {
+        position: absolute;
+        top: $font-size-lg / 2;
+        left: 0;
+
+        display: block;
+
+        width: 14px;
+        height: 14px;
+
+        content: '';
+
+        border-radius: 100%;
+        background-color: $white;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: spacer(3);
+      }
+    }
+  }
+}

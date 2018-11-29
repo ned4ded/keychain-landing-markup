@@ -26,5 +26,6 @@ export default {
     svgStylesTemplate: path.join(__dirname, 'src/lib/svg-task-templates/svg-sprite-styles.svg'),
     svgDefs: path.join(__dirname, 'src/assets/defs.svg'),
     datasets: 'datasets',
+    locales: path.join(__dirname, 'locales'),
   },
 };

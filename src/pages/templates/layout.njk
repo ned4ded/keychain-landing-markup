@@ -13,12 +13,18 @@
   <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body>
+<body class="{{ 'page-' + page if page }}">
   <!--[if lte IE 9]>
   <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
 
+  {% block header %}
+    {% include "partials/navbar.njk" %}
+  {% endblock %}
+
   {% block content %} {% endblock %}
+
+  {% include "partials/footer.njk" %}
 
   <script src="js/vendor.js" charset="utf-8"></script>
   <script src="js/main.js" charset="utf-8"></script>
