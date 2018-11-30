@@ -1,0 +1,22 @@
+[
+  {
+    "id" : "overview",
+    "_name" : "docs.overview",
+    "ref" : "#"
+  },
+  {
+    "id" : "protocol",
+    "_name" : "docs.protocol",
+    "ref" : "#"
+  },
+  {
+    "id" : "installation",
+    "_name" : "docs.installation",
+    "ref" : "#"
+  },
+  {
+    "id" : "websocket",
+    "_name" : "docs.websocket",
+    "ref" : "#"
+  }
+]

@@ -1,0 +1,58 @@
+{% set docs = datasets.get('docs') %}
+{% set socials = datasets.get('social') %}
+
+{% import "lib/icons.njk" as icons %}
+
+<div class="container-fluid footer">
+  <div class="row">
+    <div class="col-12">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-6 col-xl-4 footer__block footer__block--docs mb-7 mb-xl-0">
+            <h2 class="footer__heading">{{ 'footer.docs' | __ | capitalizeFirst }}</h2>
+
+            <ul class="footer__docs">
+              {% for doc in docs %}
+              <li>
+                <a href="{{ doc.ref }}" class="footer__link">{{ doc._name | __ | capitalizeFirst }}</a>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+
+          <div class="col-12 col-md-6 col-xl-4 footer__block footer__block--social mb-7 mb-xl-0">
+            <h2 class="footer__heading">{{ 'footer.social' | __ | capitalizeFirst }}</h2>
+
+            <ul class="footer__socials">
+              {% for s in socials %}
+              <li>
+                <a href="{{ s.ref }}" class="footer__link">
+                  <span class="footer__link-icon">
+                    {{ icons.make(s.id) }}
+                  </span>
+
+                  <span class="footer__link-text">{{ s.name | capitalizeFirst }}</span></a>
+              </li>
+              {% endfor %}
+            </ul>
+          </div>
+
+          <div class="col-12 col-xl-4 footer__block footer__block--newsletter">
+            <h2 class="footer__heading">{{ 'footer.newsletter.name' | __ | capitalizeFirst }}</h2>
+
+            <form class="footer__signup" action="/" method="post">
+                <input id="signup-email" class="footer__signup-email" type="email" name="signup" value="">
+
+                <button class="footer__signup-submit btn btn-primary text-sm" type="submit" name="button">Sign up</button>
+
+                <label class="footer__signup-lining" for="signup-email"></label>
+            </form>
+
+            <p class="footer__disclaimer">{{ 'footer.newsletter.disclaimer' | __ | capitalizeFirst }}</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

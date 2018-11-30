@@ -4,6 +4,20 @@
     "install": "install",
     "doc": "documentation"
   },
+  "footer" : {
+    "docs" : "documentation",
+    "social" : "social",
+    "newsletter" : {
+      "name" : "newsletter",
+      "disclaimer" : "if you want to receive updates on our developments be sure to subscribe to our monthly newsletter!"
+    }
+  },
+  "docs" : {
+    "overview" : "overview",
+    "protocol" : "KeyChain Protocol",
+    "installation" : "installations guides",
+    "websocket" : "WebSocket API"
+  },
   "features" : {
     "indep" : {
       "name" : "independent",

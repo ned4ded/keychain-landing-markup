@@ -1,0 +1,27 @@
+[
+  {
+    "id" : "gh",
+    "name" : "Github",
+    "ref" : "#"
+  },
+  {
+    "id" : "tw",
+    "name" : "Twitter",
+    "ref" : "#"
+  },
+  {
+    "id" : "tg",
+    "name" : "Telegram",
+    "ref" : "#"
+  },
+  {
+    "id" : "medium",
+    "name" : "medium",
+    "ref" : "#"
+  },
+  {
+    "id" : "sow",
+    "name" : "Stackoverflow",
+    "ref" : "#"
+  }
+]
