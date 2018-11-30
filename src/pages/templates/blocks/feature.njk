@@ -2,7 +2,7 @@
 
 {% macro make(item, classes) %}
 <div class="feature{{ helpers.parse(classes) }}">
-  <span class="feature__icon{{ 'feature__icon--' + item.name}}"></span>
+  <span class="feature__icon{{ ' feature__icon--' + item.name}}"></span>
 
   <p class="feature__name">{{ item._name | __ | capitalize }}</p>
 

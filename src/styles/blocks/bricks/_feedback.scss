@@ -1,0 +1,93 @@
+.feedback {
+  width: 100%;
+  max-width: 500px;
+  height: 100%;
+  padding: 40px 25px;
+
+  background-color: rgba(color('indigo'), .02);
+  box-shadow: inset 27.2px 41.9px 13px 0 rgba(#503495, .02);
+
+  &:hover {
+    @include make-box($x: 14.7px, $y: 22.6px, $blur: 250px);
+  }
+
+  &__block {
+    &--header {
+      display: flex;
+      flex-flow: row nowrap;
+
+      margin-bottom: spacer(5);
+    }
+
+    &--quote {
+      margin-bottom: 0;
+    }
+  }
+
+  &__icon {
+    width: 77px;
+    min-width: 77px;
+    height: 77px;
+    margin-right: 35px;
+
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: auto;
+
+    &--icoadmin {
+      background-image: url('../assets/imgs/customer-brand-icoadmin.png');
+    }
+
+    &--velvet {
+      background-image: url('../assets/imgs/customer-brand-velvet.png');
+    }
+  }
+
+  &__customer {
+    display: inline-flex;
+    flex-direction: column;
+
+    margin-top: 22px;
+    margin-bottom: 0;
+
+    font-size: $font-size-sm;
+
+    &-name {
+      $color: color('indigo');
+
+      color: $color;
+
+      font-weight: bold;
+
+      &:hover {
+        color: lighten($color, 10%);
+      }
+    }
+
+    &-about {
+      color: rgba(38, 50, 56, 0.5);
+    }
+  }
+
+  &__quote {
+    color: rgba(theme-color('light'), .7);
+
+    font-size: $font-size-sm;
+
+    &-text {
+      margin-bottom: spacer(4);
+
+      &:before {
+        content: '“';
+      }
+
+      &:after {
+        content: '“';
+      }
+    }
+
+    &-footer {
+      font-style: italic;
+    }
+  }
+}

@@ -9,7 +9,7 @@ import Backend from 'i18next-sync-fs-backend';
 import rename from 'gulp-rename';
 
 i18next.use(Backend).init({
-  // debug: true,
+  debug: true,
   fallbackLng: ['en'],
   initImmediate: false,
   backend: {
@@ -39,6 +39,8 @@ export function html(done) {
       return string.charAt(0).toUpperCase() + string.slice(1);
     }),
     env => env.addFilter('__', function(key, ns) {
+      if(!i18next.exists(key)) return 0;
+
       return i18next.t(key);
     }),
   ]

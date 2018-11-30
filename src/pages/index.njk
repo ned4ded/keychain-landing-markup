@@ -12,26 +12,121 @@
 
 {% block content %}
 <div class="container">
-  <div class="row justify-content-center">
-    <div class="col-9">
-      <p class="mb-0">
+  <div class="row justify-content-center mt-5">
+    <div class="col-12 col-lg-9">
+      <p class="mb-0 page-home__about-text text-lg text-justify">
         {{ 'pages.home.paragraphs.about' | __ | safe }}
       </p>
     </div>
   </div>
 
-  <div class="row">
-    <h2 class="col-12">
+  <div class="row mt-5 mt-lg-10">
+    <h2 class="col-12 text-center font-weight-bold mb-4 mb-lg-8">
       {{ 'pages.home.headings.features' | __ | capitalize }}
     </h2>
 
-    <ul class="page-gome__features">
-      {% for f in features %}
-      <li>
-        {{ feature.make(f) }}
-      </li>
-      {% endfor %}
-    </ul>
+    <div class="col-12 mb-8 mb-lg-12">
+      <ul class="page-home__features">
+        {% for f in features %}
+        <li>
+          {{ feature.make(f) }}
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="col-12 mb-8 mb-lg-12">
+      <div class="row">
+        <h2 class="col-12 text-center font-weight-bold mb-4 mb-lg-8">
+          {{ 'pages.home.headings.qualities' | __ | capitalize }}
+        </h2>
+
+        <ul class="col-12 page-home__qualities">
+          {% set qualitites = [
+            'pages.home.paragraphs.qualities.protocol' | __ | capitalize,
+            'pages.home.paragraphs.qualities.code' | __ | capitalize,
+            'pages.home.paragraphs.qualities.offer' | __ | capitalize ] %}
+
+            {% for q in qualitites %}
+            <li>
+              {{ q }}
+            </li>
+            {% endfor %}
+          </ul>
+      </div>
+    </div>
+
+    <div class="col-12 mb-8 mb-lg-12">
+      <div class="row page-home__feedback">
+        <h2 class="col-12 text-center font-weight-bold mb-4 mb-lg-8">
+          {{ 'pages.home.headings.testimonials' | __ | capitalize }}
+        </h2>
+        <p class="col-12 text-center text-light mb-9">
+          {{ 'pages.home.paragraphs.testimonials.question' | __ | capitalize }}
+        </p>
+
+        <ul class="col-12">
+          {% set customers = datasets.get('partners') %}
+
+          {% for c in customers %}
+
+            {% macro t(c, v) %}{{ (c._key + '.' + v) | __ }}{% endmacro %}
+
+            <li>
+              <div class="feedback">
+                <div class="feedback__block feedback__block--header">
+                  <span class="feedback__icon {{ 'feedback__icon--' + c.id }}"></span>
+
+                  <p class="feedback__customer">
+                    <a href="{{ c.ref }}" class="feedback__customer-name">{{ t(c, 'name') | capitalizeFirst }}</a> <span class="feedback__customer-about">{{ t(c, 'about') | capitalizeFirst }}</span>
+                  </p>
+                </div>
+
+                <blockquote class="feedback__block feedback__block--quote feedback__quote">
+                  <p class="feedback__quote-text">{{ t(c, 'feedback') | capitalizeFirst }}</p>
+
+                  <footer class="feedback__quote-footer">
+                    {% if t(c, 'author') != 0 %}{{ t(c, 'author') }}{% endif %}{% if t(c, 'author_job') != 0 %}, {{ t(c, 'author_job') }}{% endif %}
+                  </footer>
+                </blockquote>
+              </div>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-12 mb-8 mb-lg-12">
+      <div class="row justify-content-center page-home__integration">
+
+        <h2 class="col-12 text-center font-weight-bold mb-4 mb-lg-8">
+          {{ 'pages.home.headings.integration' | __ | capitalize }}
+        </h2>
+
+        <p class="col-12 col-lg-11 text-lg mb-5 mb-lg-7 text-center">
+          {{ 'pages.home.paragraphs.integration.for_dev' | __ | capitalizeFirst }}
+        </p>
+
+        <ul class="col-12 col-md-6 col-xl-12 mb-4 mb-lg-9">
+          {% set types = [
+            'pages.home.paragraphs.integration.doc_types.installation' | __ | capitalizeFirst,
+            'pages.home.paragraphs.integration.doc_types.websocket' | __ | capitalizeFirst,
+            'pages.home.paragraphs.integration.doc_types.pipe' | __ | capitalizeFirst
+            ] %}
+
+            {% for type in types %}
+              <li>
+                {{ type }}
+              </li>
+            {% endfor %}
+        </ul>
+
+        <p class="col-12 col-md-6 col-xl-12 text-center mb-0">
+          <a href="#" class="btn btn-lg btn-primary text-lg">{{ 'util.more' | __ | capitalizeFirst }}</a>
+        </p>
+      </div>
+    </div>
+
   </div>
 </div>
 {% endblock %}

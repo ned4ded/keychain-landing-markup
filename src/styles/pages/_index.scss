@@ -1,3 +1,200 @@
 .page-home {
+  &__about {
+    &-text {
+      line-height: 2;
 
+      @include bp-up(lg) {
+        line-height: 2.5;
+      }
+    }
+  }
+
+  &__features {
+    $m: 33px;
+
+    display: flex;
+    flex-flow: row wrap;
+
+    margin: -$m 0;
+    padding: 0;
+
+    list-style: none;
+
+    @include bp-up(xl) {
+      justify-content: space-around;
+
+      margin: -$m;
+    }
+
+    @include bp-up(2xl) {
+      justify-content: space-between;
+    }
+
+    li {
+      width: 100%;
+      margin: $m 0;
+
+      @include bp-up(md) {
+        width: 50%;
+      }
+
+      @include bp-up(xl) {
+        width: auto;
+
+        margin: $m;
+      }
+    }
+  }
+
+  &__qualities {
+    $m: 6px;
+
+    display: flex;
+    flex-flow: row wrap;
+
+    margin: -$m 0;
+
+    list-style: none;
+
+    @include bp-up(lg) {
+      justify-content: space-around;
+
+      margin: -$m;
+    }
+
+    li {
+      width: 100%;
+      margin: $m 0;
+      padding: 40px 60px;
+
+      text-align: center;
+      letter-spacing: 0.5px;
+
+      line-height: 1.33;
+
+      @include make-box;
+
+      @include bp-up(lg) {
+        width: calc(50% - #{$m} * 2);
+        margin: $m;
+      }
+
+      @include bp-up(xl) {
+        width: calc(33% - #{$m} * 2);
+      }
+    }
+  }
+
+  &__feedback {
+    $li-m: 80px;
+
+    h2 {
+      padding-top: 70px;
+      position: relative;
+
+      @include bp-up(lg) {
+        padding-top: 100px;
+      }
+
+      &:before {
+        $color: get-hex-64($red);
+
+        position: absolute;
+
+        display: block;
+
+        width: 58px;
+        height: 53px;
+
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+
+        content: '';
+
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='53' height='53' viewBox='0 0 24 24'%3E%3Cpath fill='#{$color}' d='M12 4.435c-1.989-5.399-12-4.597-12 3.568 0 4.068 3.06 9.481 12 14.997 8.94-5.516 12-10.929 12-14.997 0-8.118-10-8.999-12-3.568z'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: 50%;
+      }
+    }
+
+    ul {
+      display: flex;
+      flex-flow: row wrap;
+
+      width: 100%;
+      margin: -$li-m 0;
+
+      list-style: none;
+    }
+
+    li {
+      display: inline-flex;
+      align-items: center;
+      flex-direction: column;
+
+      width: 100%;
+      margin: $li-m 0;
+
+      @include bp-up(lg) {
+        width: 50%;
+      }
+    }
+  }
+
+  &__integration {
+    $li-p-x: 60px;
+
+    p {
+      @include bp-up(lg) {
+        line-height: 2.5;
+      }
+    }
+
+    ul {
+      list-style: none;
+      margin-bottom: 0;
+
+      @include bp-up(xl) {
+        display: inline-flex;
+        margin: 0 #{-$li-p-x};
+      }
+    }
+
+    li {
+      position: relative;
+
+      padding-left: 28px;
+
+      font-size: $font-size-lg;
+
+      &:before {
+        position: absolute;
+        top: $font-size-lg / 2;
+        left: 0;
+
+        display: block;
+
+        width: 14px;
+        height: 14px;
+
+        content: '';
+
+        border-radius: 100%;
+        background-color: theme-color();
+      }
+
+      &:not(:last-child) {
+        margin-bottom: spacer(3);
+
+        @include bp-up(xl) {
+          margin-bottom: 0;
+        }
+      }
+
+      @include bp-up(xl) {
+        margin: 0 $li-p-x;
+      }
+    }
+  }
 }

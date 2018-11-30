@@ -1,0 +1,78 @@
+.feature {
+  $feature-p-y: 50px;
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  width: 280px;
+  min-width: 280px;
+  height: 100%;
+  margin: 0 auto;
+  padding: $feature-p-y 15px;
+  padding-top: 140px;
+
+  border-radius: 10px;
+
+  @include make-box;
+  
+  @include bp-up(lg) {
+    padding-top: 165px;
+  }
+
+  &__icon {
+    position: absolute;
+    top: $feature-p-y;
+    left: 50%;
+
+    width: 90px;
+    height: 90px;
+
+    transform: translateX(-50%);
+
+    border-radius: 20px;
+    background-color: theme-color('secondary');
+    background-repeat: no-repeat;
+    background-position: 50%;
+
+    &--independent {
+      background-image: url('../assets/imgs/icon-indep.png');
+      background-size: 72px 72px;
+    }
+
+    &--secure {
+      background-image: url('../assets/imgs/icon-secure.png');
+      background-size: 67px 67px;
+    }
+
+    &--isolated {
+      background-image: url('../assets/imgs/icon-fich-tank.png');
+      background-size: 70px 65px;
+    }
+
+    &--friendly {
+      background-image: url('../assets/imgs/icon-file-binary.png');
+      background-size: 51px 60px;
+    }
+  }
+
+  &__name {
+    margin-bottom: spacer(5);
+
+    text-align: center;
+
+    font-size: $font-size-lg;
+    font-weight: bold;
+  }
+
+  &__descr {
+    margin-bottom: 0;
+
+    text-align: center;
+    letter-spacing: 0.5px;
+
+    font-weight: 300;
+    line-height: 1.33;
+  }
+}

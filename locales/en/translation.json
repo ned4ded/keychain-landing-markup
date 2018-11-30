@@ -33,14 +33,48 @@
   "pages" : {
     "home" : {
       "headings" : {
-        "features": "key features"
+        "features": "key features",
+        "qualities": "a perfect solution for blockchain-based projects",
+        "testimonials" : "customer testimonials",
+        "integration" : "ready to integrate?"
       },
       "paragraphs" : {
-        "about" : "<b>KeyChain</b> is a standalone app for signing transactions and generating key pairs. It stores private keys in an isolated environment where no logger, debugger or spyware can intercept them because of the three-layer security protecting each action of the system. KeyChain supports transactions from and to various blockchains, including Ethereum and Ethereum classic, Litecoin, Bitcoin, and Bitshares."
+        "about" : "<b>KeyChain</b> is a standalone app for signing transactions and generating key pairs. It stores private keys in an isolated environment where no logger, debugger or spyware can intercept them because of the three-layer security protecting each action of the system. KeyChain supports transactions from and to various blockchains, including Ethereum and Ethereum classic, Litecoin, Bitcoin, and Bitshares.",
+        "qualities" : {
+          "protocol" : "instead of losing time to build the protocol for storing user’s private keys, use the KeyChain",
+          "code" : "our code is open-source and available to you now",
+          "offer" : "offer truly decentralized product for Web.3 and change the world of institutional control"
+        },
+        "testimonials" : {
+          "question" : "what did they say about our products?"
+        },
+        "integration" : {
+          "for_dev" : "if you are a developer who is ready to give KeyChain a go - take a look at our set of simple guides and documentation  that we have created specially for you.",
+          "doc_types" : {
+            "installation" : "KeyChain installation guides",
+            "websocket" : "WebSocket API",
+            "pipe" :  "Pipe API"
+          }
+        }
       }
     }
   },
+  "partners" : {
+    "icoadmin" : {
+      "name" : "ICOadm.in",
+      "about" : "Superior Software Platform for ICO/STO launch",
+      "feedback" : "A free, open-source application to store private keys? - Yes, we want it! KeyChain helped solve many security dilemmas for our clients.",
+      "author" : "Sabir Magdeev",
+      "author_job" : "COO"
+    },
+    "velvet" : {
+      "name" : "Velvet.Exchange",
+      "about" : "Trading platform",
+      "feedback" : "We wanted to build the exchange which doesn’t store our clients keys. KeyChain solved this issue for us and now we our proud users of it."
+    }
+  },
   "util" : {
-    "download" : "download"
+    "download" : "download",
+    "more" : "learn more"
   }
 }

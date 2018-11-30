@@ -1,0 +1,14 @@
+[
+  {
+    "id" : "icoadmin",
+    "_key" : "partners.icoadmin",
+    "ref" : "#",
+    "icon" : "icoadmin"
+  },
+  {
+    "id" : "velvet",
+    "_key" : "partners.velvet",
+    "ref" : "#",
+    "icon" : "velvet"
+  }
+]
