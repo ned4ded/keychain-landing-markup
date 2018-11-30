@@ -22,7 +22,7 @@
 
   <div class="row mt-5 mt-lg-10">
     <h2 class="col-12 text-center font-weight-bold mb-4 mb-lg-8">
-      {{ 'pages.home.headings.features' | __ | capitalize }}
+      {{ 'pages.home.headings.features' | __ | capitalizeFirst }}
     </h2>
 
     <div class="col-12 mb-8 mb-lg-12">
@@ -38,14 +38,14 @@
     <div class="col-12 mb-8 mb-lg-12">
       <div class="row">
         <h2 class="col-12 text-center font-weight-bold mb-4 mb-lg-8">
-          {{ 'pages.home.headings.qualities' | __ | capitalize }}
+          {{ 'pages.home.headings.qualities' | __ | capitalizeFirst }}
         </h2>
 
         <ul class="col-12 page-home__qualities">
           {% set qualitites = [
-            'pages.home.paragraphs.qualities.protocol' | __ | capitalize,
-            'pages.home.paragraphs.qualities.code' | __ | capitalize,
-            'pages.home.paragraphs.qualities.offer' | __ | capitalize ] %}
+            'pages.home.paragraphs.qualities.protocol' | __ | capitalizeFirst,
+            'pages.home.paragraphs.qualities.code' | __ | capitalizeFirst,
+            'pages.home.paragraphs.qualities.offer' | __ | capitalizeFirst ] %}
 
             {% for q in qualitites %}
             <li>
@@ -59,10 +59,10 @@
     <div class="col-12 mb-8 mb-lg-12">
       <div class="row page-home__feedback">
         <h2 class="col-12 text-center font-weight-bold mb-4 mb-lg-8">
-          {{ 'pages.home.headings.testimonials' | __ | capitalize }}
+          {{ 'pages.home.headings.testimonials' | __ | capitalizeFirst }}
         </h2>
         <p class="col-12 text-center text-light mb-9">
-          {{ 'pages.home.paragraphs.testimonials.question' | __ | capitalize }}
+          {{ 'pages.home.paragraphs.testimonials.question' | __ | capitalizeFirst }}
         </p>
 
         <ul class="col-12">
@@ -100,7 +100,7 @@
       <div class="row justify-content-center page-home__integration">
 
         <h2 class="col-12 text-center font-weight-bold mb-4 mb-lg-8">
-          {{ 'pages.home.headings.integration' | __ | capitalize }}
+          {{ 'pages.home.headings.integration' | __ | capitalizeFirst }}
         </h2>
 
         <p class="col-12 col-lg-11 text-lg mb-5 mb-lg-7 text-center">

@@ -63,5 +63,5 @@
 @mixin make-box($x: 22.3px, $y: 34.4px, $blur : 38px, $spread: 0) {
   background-color: rgba($white, .99);
 
-  box-shadow: $x $y $blur $spread rgba(theme-color('secondary'), .99);
+  box-shadow: $x $y $blur $spread rgba(theme-color('secondary'), .5);
 }
