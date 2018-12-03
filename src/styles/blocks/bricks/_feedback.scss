@@ -50,8 +50,6 @@
     margin-top: 22px;
     margin-bottom: 0;
 
-    font-size: $font-size-sm;
-
     &-name {
       $color: color('indigo');
 
@@ -72,7 +70,7 @@
   &__quote {
     color: rgba(theme-color('light'), .7);
 
-    font-size: $font-size-sm;
+    font-size: $font-size-lg;
 
     &-text {
       margin-bottom: spacer(4);

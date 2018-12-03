@@ -16,9 +16,14 @@
   border-radius: 10px;
 
   @include make-box;
-  
+
   @include bp-up(lg) {
     padding-top: 165px;
+  }
+
+  @include bp-up(xl) {
+    width: 260px;
+    min-width: 260px;
   }
 
   &__icon {

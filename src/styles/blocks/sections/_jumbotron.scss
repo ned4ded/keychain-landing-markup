@@ -9,9 +9,6 @@
     background-repeat: no-repeat;
     background-position: 33% 0, 100% 100%;
     background-size: auto;
-  }
-
-  @include bp-up(2xl) {
     min-height: 968px;
     padding-top: 8px;
   }
@@ -20,7 +17,7 @@
     &--about {
       padding-top: spacer(4);
 
-      @include bp-up(2xl) {
+      @include bp-up(xl) {
         padding-top: 155px;
       }
     }
@@ -34,12 +31,15 @@
 
       @include bp-up(xl) {
         display: block;
+        padding-top: 90px;
       }
 
       img {
-        position: absolute;
-        top: 0;
-        left: 0;
+        // position: absolute;
+        // top: 0;
+        // left: 0;
+
+
       }
     }
 
@@ -89,13 +89,15 @@
 
       &:before {
         position: absolute;
-        top: $font-size-lg / 2;
+        top: 11px;
         left: 0;
 
         display: block;
 
-        width: 14px;
-        height: 14px;
+        width: 10px;
+        height: 10px;
+
+        transform: translateY(-50%);
 
         content: '';
 

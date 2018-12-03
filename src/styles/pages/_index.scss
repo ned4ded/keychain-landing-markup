@@ -21,13 +21,9 @@
     list-style: none;
 
     @include bp-up(xl) {
-      justify-content: space-around;
-
-      margin: -$m;
-    }
-
-    @include bp-up(2xl) {
       justify-content: space-between;
+
+      margin: 0;
     }
 
     li {
@@ -41,7 +37,7 @@
       @include bp-up(xl) {
         width: auto;
 
-        margin: $m;
+        margin: 0;
       }
     }
   }
@@ -173,13 +169,15 @@
 
       &:before {
         position: absolute;
-        top: $font-size-lg / 2;
+        top: 11px;
         left: 0;
 
         display: block;
 
-        width: 14px;
-        height: 14px;
+        width: 10px;
+        height: 10px;
+
+        transform: translateY(-50%);
 
         content: '';
 

@@ -38,9 +38,10 @@
       display: inline-block;
     }
 
-    @include bp-up(2xl) {
+    @include bp-up(xl) {
       position: relative;
-      left: -147px;
+      left: -93px;
+      // left: -147px;
     }
   }
 
@@ -52,7 +53,7 @@
 
     color: $white;
 
-    font-size: $font-size-xs;
+    font-size: $font-size-sm;
 
     @include bp-up(xl) {
       padding: spacer(3) $navbar-link-p-x-xl;
