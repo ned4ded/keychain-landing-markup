@@ -1,12 +1,12 @@
 {
   "lang" : "en",
   "charset" : "utf-8",
-  "title" : "Placeholder Title",
-  "description" : "description",
+  "title" : "KeyChain by Array.IO - an open-source desktop app to manage private keys",
+  "description" : "KeyChain supports transactions from and to various blockchains, including Bitcoin, Bitshares, Ethereum, Ethereum classic and Litecoin. It stores private keys in an isolated environment where no logger, debugger or spyware can intercept them because of the three-layer security protecting each action of the system. ",
   "og" : {
-    "title" : "placeholder title",
-    "url" : "//ned4ded.github.io/keychain-landing-markup/www/",
-    "site_name" : "placeholder site name",
-    "descr" : "description"
+    "title" : "KeyChain by Array.IO",
+    "url" : "//keychain.array.io",
+    "site_name" : "keychain.array.io",
+    "descr" : "KeyChain supports transactions from and to various blockchains, including Bitcoin, Bitshares, Ethereum, Ethereum classic and Litecoin. It stores private keys in an isolated environment where no logger, debugger or spyware can intercept them because of the three-layer security protecting each action of the system. "
   }
 }
