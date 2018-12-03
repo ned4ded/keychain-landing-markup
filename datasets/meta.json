@@ -2,5 +2,11 @@
   "lang" : "en",
   "charset" : "utf-8",
   "title" : "Placeholder Title",
-  "description" : "description"
+  "description" : "description",
+  "og" : {
+    "title" : "placeholder title",
+    "url" : "//ned4ded.github.io/keychain-landing-markup/www/",
+    "site_name" : "placeholder site name",
+    "descr" : "description"
+  }
 }
