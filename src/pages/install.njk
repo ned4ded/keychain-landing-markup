@@ -1,0 +1,32 @@
+{% set page = 'install' %}
+
+{% extends "layout.njk" %}
+
+{% block content %}
+<div class="container-fluid page-install__content">
+  <div class="row">
+    <a href="//array.io/app.html" class="d-block col-12 bg-secondary text-center p-2 text-dark">Whant to know more about <strong>Array.IO Client?</strong> Check this out!</a>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+
+      <div class="container pt-8 pb-8">
+        <div class="row">
+          <div class="col-12 text-center mb-6">
+            <img src="assets/imgs/kch-brand-logo-img.svg" alt="Keychain Logotype" class="mb-5" width="{{ 132 * 1.5}}" height="{{ 123 * 1.5}}">
+
+            <h1 class="mb-4">The <span class="text-primary">Keychain</span> App</h1>
+            <p class="mb-7">
+              <a href="#" class="btn btn-primary btn-lg">Download App</a>
+            </p>
+            <p class="text-muted mb-0">
+              Don't know where to start? Look into our application's <a href="/">overview</a>.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

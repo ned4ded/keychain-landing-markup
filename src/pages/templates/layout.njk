@@ -30,7 +30,13 @@
   <![endif]-->
 
   {% block header %}
-    {% include "partials/navbar.njk" %}
+  <div class="container-fluid bg-primary">
+    <div class="row">
+      <div class="col-12">
+        {% include "partials/navbar.njk" %}
+      </div>
+    </div>
+  </div>
   {% endblock %}
 
   {% block content %} {% endblock %}

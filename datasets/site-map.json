@@ -7,7 +7,7 @@
   {
     "name" : "install",
     "_key" : "nav.install",
-    "ref" : "#"
+    "ref" : "/install.htmll"
   },
   {
     "name" : "documentation",
