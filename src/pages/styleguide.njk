@@ -1,0 +1,70 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <h1 class="mb-6 mt-7 col-12 font-weight-bold">Color samples</h1>
+
+    {% for item in ['contrast-1', 'contrast-2', 'contrast-3'] %}
+    <div class="col-12 mt-5 mb-5">
+      <h2>Color {{ item }}</h2>
+
+      <div class="row mt-4 mb-4">
+        <div class="col-6 mb-3">
+          <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+
+        <div class="col-6 mb-3">
+          <p class="text-{{ item }} mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+
+        <div class="col-6 bg-dark pt-2 pb-2">
+          <p class="text-white mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+
+        <div class="col-6 bg-dark pt-2 pb-2">
+          <p class="text-{{ item }} mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+      </div>
+
+      <div class="row mt-4 mb-4">
+        <p class="col-12 mb-3">
+          <a href="#" class="btn btn-lg btn-primary">ButtonButton</a>
+          <a href="#" class="btn btn-lg btn-secondary">ButtonButton</a>
+          <a href="#" class="btn btn-lg btn-{{ item }}">ButtonButton</a>
+        </p>
+
+        <p class="col-12 mb-3">
+          <a href="#" class="btn btn-lg btn-outline-primary">ButtonButton</a>
+          <a href="#" class="btn btn-lg btn-outline-secondary">ButtonButton</a>
+          <a href="#" class="btn btn-lg btn-outline-{{ item }}">ButtonButton</a>
+        </p>
+
+        <p class="col-12 mb-3 pt-5 pb-5 bg-primary">
+          <a href="#" class="btn btn-lg btn-{{ item }}">ButtonButton</a>
+          <a href="#" class="btn btn-lg btn-outline-{{ item }}">ButtonButton</a>
+        </p>
+
+        <p class="col-12 mb-3 pt-5 pb-5 bg-secondary">
+          <a href="#" class="btn btn-lg btn-{{ item }}">ButtonButton</a>
+          <a href="#" class="btn btn-lg btn-outline-{{ item }}">ButtonButton</a>
+        </p>
+
+        <p class="col-12 mb-0 pt-5 pb-5 bg-dark">
+          <a href="#" class="btn btn-lg btn-{{ item }}">ButtonButton</a>
+          <a href="#" class="btn btn-lg btn-outline-{{ item }}">ButtonButton</a>
+        </p>
+      </div>
+
+      <div class="row mt-4 mb-4">
+        <h3 class="col-12">Color scheme</h3>
+        <div class="col-3 bg-primary" style="height: 200px;"></div>
+        <div class="col-3 bg-{{item}}" style="height: 200px;"></div>
+        <div class="col-3 bg-secondary" style="height: 200px;"></div>
+        <div class="col-3 bg-dark" style="height: 200px;"></div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
