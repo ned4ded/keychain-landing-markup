@@ -7,11 +7,13 @@
 
   width: 100%;
 
-  min-height: 70px;
-
   @include bp-up(lg) {
     justify-content: space-between;
   }
+
+  @include scale((
+    min-height: 70px,
+  ));
 
 
   &__nav {
@@ -25,9 +27,10 @@
 
     color: $white;
 
-    @include bp-up(xl) {
-      margin: 0 -$navbar-link-p-x-xl;
-    }
+    @include scale((
+      margin-right: -$navbar-link-p-x-xl,
+      margin-left: -$navbar-link-p-x-xl,
+    ), false);
 
     &-item {}
   }
@@ -36,29 +39,45 @@
     display: none;
 
     @include bp-up(lg) {
+      position: relative;
       display: inline-block;
+      // left: -147px;
+
+      left: -85px;
     }
 
     @include bp-up(xl) {
-      position: relative;
-      left: -93px;
-      // left: -147px;
+      left: -97px;
+    }
+
+    @include bp-up(2xl) {
+      left: -111px;
+    }
+
+    img {
+      @include scale((
+        width: 281.25px,
+        height: 108px,
+      ));
     }
   }
 
   &__link {
     padding: spacer(3) $navbar-link-p-x;
 
-    letter-spacing: 2.8px;
     text-transform: uppercase;
 
     color: $white;
 
-    font-size: $font-size-sm;
+    @include scale((
+      padding-left: $navbar-link-p-x-xl,
+      padding-right: $navbar-link-p-x-xl,
+    ), false);
 
-    @include bp-up(xl) {
-      padding: spacer(3) $navbar-link-p-x-xl;
-    }
+    @include scale((
+      font-size: $font-size-sm,
+      letter-spacing: 2.8px,
+    ));
 
     &:hover {
       color: $white;

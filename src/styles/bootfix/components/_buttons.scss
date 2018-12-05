@@ -1,0 +1,29 @@
+.btn {
+  @include scale((
+    padding-top: $btn-padding-y,
+    padding-bottom: $btn-padding-y,
+    padding-left: $btn-padding-x,
+    padding-right: $btn-padding-x,
+    font-size: $font-size-base,
+  ));
+
+  &-lg {
+    @include scale((
+      padding-top: $btn-padding-y-lg,
+      padding-bottom: $btn-padding-y-lg,
+      padding-left: $btn-padding-x-lg,
+      padding-right: $btn-padding-x-lg,
+      font-size: $font-size-lg,
+    ));
+  }
+
+  &-sm {
+    @include scale((
+      padding-top: $btn-padding-y-sm,
+      padding-bottom: $btn-padding-y-sm,
+      padding-left: $btn-padding-x-sm,
+      padding-right: $btn-padding-x-sm,
+      font-size: $font-size-sm,
+    ));
+  }
+}

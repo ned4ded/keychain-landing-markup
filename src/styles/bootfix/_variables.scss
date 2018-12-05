@@ -1,3 +1,53 @@
+$scales-up: (
+  lg : 0.77,
+  xl : 0.88,
+  2xl : 1
+);
+
+@function is-important($arg, $boolean) {
+  @if $boolean {
+    @return $arg !important;
+  }
+
+  @else {
+    @return $arg;
+  }
+}
+
+@mixin flatten-props($map, $cc: 1, $is-important: false) {
+  @each $prop, $v in $map {
+    @if type-of($v) == 'list' {
+
+      $list: $v;
+
+      @for $i from 1 through length($list) {
+        $cur: nth($list, $i);
+
+        $list: set-nth($list, $i, is-important($cur * $cc, $is-important));
+      }
+
+      #{ $prop } : $list;
+    }
+
+    @else {
+      #{ $prop } : is-important($v * $cc, $is-important);
+    }
+  }
+}
+
+@mixin scale($map, $is-from-start: true, $important: false) {
+
+  @if $is-from-start {
+    @include flatten-props($map, $is-important: $important);
+  }
+
+  @each $bp, $cc in $scales-up {
+    @include media-breakpoint-up($bp) {
+      @include flatten-props($map, $cc, $important);
+    }
+  }
+}
+
 // the original variables could be looked up here https://github.com/twbs/bootstrap/blob/v4-dev/scss/_variables.scss
 
 // Color system
@@ -27,10 +77,10 @@ $light:         #7a7554;
 $dark:          #2f2f2f;
 
 $theme-colors: (
-  'contrast-1' : rgb(250, 85, 90),
-  'contrast-2' : #d82f62,
-  'contrast-3' : #ff9933,
-  'contrast-4' : #60b769
+  // 'contrast-1' : rgb(250, 85, 90),
+  'contrast' : #d82f62,
+  // 'contrast-3' : #ff9933,
+  // 'contrast-4' : #60b769
 );
 
 // $theme-color-interval:      8%;
@@ -103,13 +153,17 @@ $grid-breakpoints: (
   md: 768px,
   lg: 992px,
   xl: 1200px,
+  2xl: 1366px,
 );
 
 $container-max-widths: (
   sm: 540px,
   md: 720px,
-  lg: 960px,
-  xl: 1140px,
+  lg: 942px,
+  // lg: 960px,
+  xl: 1072px,
+  // xl: 1140px,
+  2xl: 1220px,
 );
 
 // $grid-columns:                12;

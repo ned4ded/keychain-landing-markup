@@ -1,25 +1,30 @@
 .jumbotron {
   overflow: hidden;
 
-  padding-bottom: 110px;
   background-image: linear-gradient(333deg, lighten(theme-color(), 5%), theme-color());
 
-  @include bp-up(xl) {
+  @include scale((
+    padding-bottom: 110px,
+    min-height: 968px,
+  ));
+
+  @include bp-up(lg) {
     background-image: url('../assets/imgs/jumbotron-bg-main-part.png'), url('../assets/imgs/jumbotron-bg-subpart.png');
     background-repeat: no-repeat;
     background-position: 33% 0, 100% 100%;
-    background-size: auto;
-    min-height: 968px;
-    padding-top: 8px;
   }
+
+  @include scale((
+    background-size: (2472px, 122px),
+  ), false);
 
   &__block {
     &--about {
       padding-top: spacer(4);
 
-      @include bp-up(xl) {
-        padding-top: 155px;
-      }
+      @include scale((
+        padding-top: 155px,
+      ), false);
     }
 
     &--windows {
@@ -29,17 +34,22 @@
 
       display: none;
 
-      @include bp-up(xl) {
+      @include bp-up(lg) {
         display: block;
-        padding-top: 90px;
       }
 
+      @include scale((
+        padding-top: 90px,
+      ), false);
+
       img {
-        // position: absolute;
-        // top: 0;
-        // left: 0;
+        display: block;
+        margin: 0 auto;
 
-
+        @include scale((
+          width: 533.25px,
+          height: 408px,
+        ));
       }
     }
 
@@ -48,28 +58,29 @@
 
       text-align: center;
 
-      @include bp-up(xl) {
-        margin-top: 165px;
-      }
+      @include scale((
+        margin-top: 165px,
+      ), false);
     }
   }
 
   &__heading {
-    margin-bottom: 50px;
+    @include scale((
+      margin-bottom: 50px,
+    ));
 
-    line-height: 1.33;
-
-    @include bp-up(xl) {
-      max-width: 590px;
-    };
+    @include scale((
+      max-width: 590px,
+    ), false);
   }
 
   &__download {
-    width: 350px;
-    padding-top: 24px;
-    padding-bottom: 24px;
-
-    font-size: $font-size-lg;
+    @include scale((
+      width: 350px,
+      padding-top: 24px,
+      padding-bottom: 24px,
+      font-size: $font-size-lg,
+    ));
   }
 
   &__features {
@@ -81,32 +92,35 @@
     li {
       position: relative;
 
-      padding-left: 28px;
-
       color: $white;
 
-      font-size: $font-size-lg;
+      @include scale((
+        padding-left: 28px,
+        font-size: $font-size-lg,
+      ));
 
       &:before {
         position: absolute;
-        top: 11px;
         left: 0;
 
         display: block;
-
-        width: 10px;
-        height: 10px;
-
-        transform: translateY(-50%);
 
         content: '';
 
         border-radius: 100%;
         background-color: $white;
+
+        @include scale((
+          top: 6px,
+          width: 10px,
+          height: 10px,
+        ));
       }
 
       &:not(:last-child) {
-        margin-bottom: spacer(3);
+        @include scale((
+          margin-bottom: spacer(3),
+        ));
       }
     }
   }

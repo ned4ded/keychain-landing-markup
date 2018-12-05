@@ -1,11 +1,17 @@
 .feedback {
   width: 100%;
-  max-width: 500px;
   height: 100%;
-  padding: 40px 25px;
 
   background-color: rgba(color('indigo'), .02);
   box-shadow: inset 27.2px 41.9px 13px 0 rgba(#503495, .02);
+
+  @include scale((
+    max-width: 500px,
+    padding-top: 40px,
+    padding-bottom: 40px,
+    padding-left: 25px,
+    padding-right: 25px,
+  ));
 
   &:hover {
     @include make-box($x: 14.7px, $y: 22.6px, $blur: 250px);
@@ -16,7 +22,9 @@
       display: flex;
       flex-flow: row nowrap;
 
-      margin-bottom: spacer(5);
+      @include scale((
+        margin-bottom: spacer(5),
+      ));
     }
 
     &--quote {
@@ -25,14 +33,17 @@
   }
 
   &__icon {
-    width: 77px;
-    min-width: 77px;
-    height: 77px;
-    margin-right: 35px;
-
+    border-radius: 100%;
     background-repeat: no-repeat;
     background-position: 50%;
-    background-size: auto;
+    background-size: 100%;
+
+    @include scale((
+      width: 77px,
+      min-width: 77px,
+      height: 77px,
+      margin-right: 35px,
+    ));
 
     &--icoadmin {
       background-image: url('../assets/imgs/customer-brand-icoadmin.png');
@@ -47,8 +58,11 @@
     display: inline-flex;
     flex-direction: column;
 
-    margin-top: 22px;
     margin-bottom: 0;
+
+    @include scale((
+      margin-top: 22px,
+    ));
 
     &-name {
       $color: color('indigo');
@@ -70,10 +84,14 @@
   &__quote {
     color: rgba(theme-color('light'), .7);
 
-    font-size: $font-size-lg;
+    @include scale((
+      font-size: $font-size-lg,
+    ));
 
     &-text {
-      margin-bottom: spacer(4);
+      @include scale((
+        margin-bottom: spacer(4),
+      ));
 
       &:before {
         content: '“';

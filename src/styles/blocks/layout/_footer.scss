@@ -1,29 +1,37 @@
 .footer {
-  padding-top: 60px;
-  padding-bottom: 60px;
-
   background-image: linear-gradient(333deg, lighten(theme-color(), 5%), theme-color());
 
-  @include bp-up(xl) {
-    min-height: 610px;
-    padding-top: 167px;
-    padding-bottom: 159px;
+  @include scale((
+    padding-top: 60px,
+    padding-bottom: 60px,
+  ))
 
+  @include bp-up(lg) {
     background-image: url('../assets/imgs/footer-bg-main-part.png');
     background-repeat: no-repeat;
     background-position: 50% 100%;
-    background-size: auto;
   }
 
-  &__heading {
-    margin-bottom: spacer(5);
+  @include scale((
+    min-height: 610px,
+    padding-top: 167px,
+    padding-bottom: 159px,
+    background-size: 4507px,
+  ), false)
 
-    font-size: $h3-font-size;
+  &__heading {
     font-weight: bold;
+
+    @include scale((
+      font-size: $h3-font-size,
+      margin-bottom: spacer(5),
+    ))
   }
 
   &__block {
-    font-size: $font-size-lg;
+    @include scale((
+      font-size: $font-size-lg,
+    ))
   }
 
   &__socials,
@@ -35,7 +43,9 @@
 
     li {
       &:not(:last-child) {
-        margin-bottom: spacer(2);
+        @include scale((
+          margin-bottom: spacer(2),
+        ))
       }
     }
   }
@@ -43,8 +53,11 @@
   &__disclaimer {
     color: $white;
 
-    font-size: $font-size-lg;
     font-style: italic;
+
+    @include scale((
+      font-size: $font-size-lg,
+    ))
   }
 
   &__signup {
@@ -53,20 +66,24 @@
     position: relative;
     z-index: 0;
 
-    margin-bottom: spacer(3);
-    padding: 5px;
-
     border: none;
-    border-radius: 5px;
     background-color: $white;
+
+    @include scale((
+      margin-bottom: spacer(3),
+      padding: 5px,
+      border-radius: 5px
+    ))
 
     &-email {
       flex-grow: 2;
-      min-width: 50px;
-
-      padding-left: 15px;
 
       border: 0;
+
+      @include scale((
+        padding-left: 15px,
+        min-width: 50px
+      ))
 
       &:invalid {
         box-shadow: none;
@@ -113,9 +130,11 @@
   &__link {
     color: $white;
 
-    font-size: $font-size-lg;
-
     line-height: 1;
+
+    @include scale((
+      font-size: $font-size-lg,
+    ))
 
     &:hover {
       color: rgba($white, .9);
@@ -130,9 +149,11 @@
 
       display: inline-block;
 
-      width: $font-size-lg;
-      height: $font-size-lg;
-      margin-right: spacer(3);
+      @include scale((
+        width: $font-size-lg,
+        height: $font-size-lg,
+        margin-right: spacer(3)
+      ))
 
       vertical-align: middle;
 

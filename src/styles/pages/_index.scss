@@ -20,7 +20,7 @@
 
     list-style: none;
 
-    @include bp-up(xl) {
+    @include bp-up(lg) {
       justify-content: space-between;
 
       margin: 0;
@@ -34,7 +34,7 @@
         width: 50%;
       }
 
-      @include bp-up(xl) {
+      @include bp-up(lg) {
         width: auto;
 
         margin: 0;
@@ -54,14 +54,12 @@
 
     @include bp-up(lg) {
       justify-content: space-around;
-
       margin: -$m;
     }
 
     li {
       width: 100%;
       margin: $m 0;
-      padding: 40px 60px;
 
       text-align: center;
       letter-spacing: 0.5px;
@@ -70,12 +68,15 @@
 
       @include make-box;
 
-      @include bp-up(lg) {
-        width: calc(50% - #{$m} * 2);
-        margin: $m;
-      }
+      @include scale((
+        padding-top: 40px,
+        padding-bottom: 40px,
+        padding-right: 60px,
+        padding-left: 60px
+      ));
 
-      @include bp-up(xl) {
+      @include bp-up(lg) {
+        margin: $m;
         width: calc(33% - #{$m} * 2);
       }
     }
@@ -88,9 +89,9 @@
       padding-top: 70px;
       position: relative;
 
-      @include bp-up(lg) {
-        padding-top: 100px;
-      }
+      @include scale((
+        padding-top: 100px
+      ), false);
 
       &:before {
         $color: get-hex-64($red);
@@ -99,18 +100,32 @@
 
         display: block;
 
-        width: 58px;
-        height: 53px;
-
         top: 0;
         left: 50%;
         transform: translateX(-50%);
+
+        @include scale((
+          width: 58px,
+          height: 53px,
+        ));
 
         content: '';
 
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='53' height='53' viewBox='0 0 24 24'%3E%3Cpath fill='#{$color}' d='M12 4.435c-1.989-5.399-12-4.597-12 3.568 0 4.068 3.06 9.481 12 14.997 8.94-5.516 12-10.929 12-14.997 0-8.118-10-8.999-12-3.568z'/%3E%3C/svg%3E");
         background-repeat: no-repeat;
         background-position: 50%;
+
+        @include bp-up(lg) {
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='#{53 * map-get($scales-up, lg)}' height='#{53 * map-get($scales-up, lg)}' viewBox='0 0 24 24'%3E%3Cpath fill='#{$color}' d='M12 4.435c-1.989-5.399-12-4.597-12 3.568 0 4.068 3.06 9.481 12 14.997 8.94-5.516 12-10.929 12-14.997 0-8.118-10-8.999-12-3.568z'/%3E%3C/svg%3E");
+        }
+
+        @include bp-up(xl) {
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='#{53 * map-get($scales-up, xl)}' height='#{53 * map-get($scales-up, xl)}' viewBox='0 0 24 24'%3E%3Cpath fill='#{$color}' d='M12 4.435c-1.989-5.399-12-4.597-12 3.568 0 4.068 3.06 9.481 12 14.997 8.94-5.516 12-10.929 12-14.997 0-8.118-10-8.999-12-3.568z'/%3E%3C/svg%3E");
+        }
+
+        @include bp-up(2xl) {
+          background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='#{53 * map-get($scales-up, 2xl)}' height='#{53 * map-get($scales-up, 2xl)}' viewBox='0 0 24 24'%3E%3Cpath fill='#{$color}' d='M12 4.435c-1.989-5.399-12-4.597-12 3.568 0 4.068 3.06 9.481 12 14.997 8.94-5.516 12-10.929 12-14.997 0-8.118-10-8.999-12-3.568z'/%3E%3C/svg%3E");
+        }
       }
     }
 
@@ -152,7 +167,7 @@
 
       list-style: none;
 
-      @include bp-up(xl) {
+      @include bp-up(lg) {
         display: inline-flex;
         justify-content: center;
 
@@ -163,37 +178,38 @@
     li {
       position: relative;
 
-      padding-left: 28px;
-
-      font-size: $font-size-lg;
+      @include scale((
+        padding-left: 28px,
+        font-size: $font-size-lg,
+      ));
 
       &:before {
         position: absolute;
-        top: 11px;
         left: 0;
 
         display: block;
-
-        width: 10px;
-        height: 10px;
-
-        transform: translateY(-50%);
 
         content: '';
 
         border-radius: 100%;
         background-color: theme-color();
+
+        @include scale((
+          width: 10px,
+          height: 10px,
+          top: 6px,
+        ));
       }
 
       &:not(:last-child) {
         margin-bottom: spacer(3);
 
-        @include bp-up(xl) {
+        @include bp-up(lg) {
           margin-bottom: 0;
         }
       }
 
-      @include bp-up(xl) {
+      @include bp-up(lg) {
         margin: 0 $li-p-x;
       }
     }
