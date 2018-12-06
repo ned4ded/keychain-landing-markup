@@ -7,16 +7,16 @@
   {
     "name" : "install",
     "_key" : "nav.install",
-    "ref" : "/install.htmll"
+    "ref" : "/install.html"
   },
   {
     "name" : "documentation",
     "_key" : "nav.doc",
-    "ref" : "#"
+    "ref" : "//github.com/arrayio/array-io-keychain"
   },
   {
     "name" : "array.io",
     "_key" : false,
-    "ref" : "#"
+    "ref" : "//array.io/"
   }
 ]

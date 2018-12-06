@@ -2,26 +2,26 @@
   {
     "id" : "gh",
     "name" : "Github",
-    "ref" : "#"
+    "ref" : "//github.com/arrayio"
   },
   {
     "id" : "tw",
     "name" : "Twitter",
-    "ref" : "#"
+    "ref" : "//twitter.com/ProjectArray"
   },
   {
     "id" : "tg",
     "name" : "Telegram",
-    "ref" : "#"
+    "ref" : "//t.me/arrayio"
   },
   {
     "id" : "medium",
     "name" : "medium",
-    "ref" : "#"
+    "ref" : "//medium.com/array-io"
   },
   {
     "id" : "sow",
     "name" : "Stackoverflow",
-    "ref" : "#"
+    "ref" : "//stackoverflow.com/users/10429540/array-io"
   }
 ]

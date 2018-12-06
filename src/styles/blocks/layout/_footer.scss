@@ -53,8 +53,6 @@
   &__disclaimer {
     color: $white;
 
-    font-style: italic;
-
     @include scale((
       font-size: $font-size-lg,
     ))

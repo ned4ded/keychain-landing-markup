@@ -2,21 +2,21 @@
   {
     "id" : "overview",
     "_name" : "docs.overview",
-    "ref" : "#"
+    "ref" : "//github.com/arrayio/array-io-keychain/wiki"
   },
   {
     "id" : "protocol",
     "_name" : "docs.protocol",
-    "ref" : "#"
+    "ref" : "//github.com/arrayio/array-io-keychain/wiki/KeyChain-Protocol"
   },
   {
     "id" : "installation",
     "_name" : "docs.installation",
-    "ref" : "#"
+    "ref" : "//github.com/arrayio/array-io-keychain/wiki/Installation-guides"
   },
   {
     "id" : "websocket",
     "_name" : "docs.websocket",
-    "ref" : "#"
+    "ref" : "//github.com/arrayio/array-io-keychain/wiki/Pipe-API"
   }
 ]
