@@ -9,9 +9,25 @@
   ));
 
   @include bp-up(lg) {
+    @media (max-height: 968px * map-get($scales-up, lg)) {
+      min-height: 100% *  map-get($scales-up, lg);
+    }
+  }
+  @include bp-up(xl) {
+    @media (max-height: 968px * map-get($scales-up, xl)) {
+      min-height: 100% *  map-get($scales-up, xl);
+    }
+  }
+  @include bp-up(2xl) {
+    @media (max-height: 968px * map-get($scales-up, 2xl)) {
+      min-height: 100% *  map-get($scales-up, 2xl);
+    }
+  }
+
+  @include bp-up(lg) {
     background-image: url('../assets/imgs/jumbotron-bg-main-part.png'), url('../assets/imgs/jumbotron-bg-subpart.png');
     background-repeat: no-repeat;
-    background-position: 33% 0, 100% 100%;
+    background-position: 33% 100%, 100% 100%;
   }
 
   @include scale((
