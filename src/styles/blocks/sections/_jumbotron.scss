@@ -23,12 +23,30 @@
       padding-top: spacer(4);
 
       @include scale((
-        // padding-top: 155px,
-        padding-top: 65px,
+      // padding-top: 155px,
+      padding-top: 65px,
       ), false);
 
       @include bp-up(2xl) {
         padding-top: 155px;
+      }
+
+      @include bp-up(lg) {
+        @media (max-height: 968px * map-get($scales-up, lg)) {
+          padding-top: 65px *  map-get($scales-up, lg);
+        }
+      }
+
+      @include bp-up(xl) {
+        @media (max-height: 968px * map-get($scales-up, xl)) {
+          padding-top: 65px *  map-get($scales-up, xl);
+        }
+      }
+
+      @include bp-up(2xl) {
+        @media (max-height: 968px * map-get($scales-up, 2xl)) {
+          padding-top: 65px *  map-get($scales-up, 2xl);
+        }
       }
     }
 
@@ -44,12 +62,30 @@
       }
 
       @include scale((
-        // padding-top: 90px,
-        padding-top: 0,
+      // padding-top: 90px,
+      padding-top: 0,
       ), false);
 
       @include bp-up(2xl) {
         padding-top: 90px;
+      }
+
+      @include bp-up(lg) {
+        @media (max-height: 968px * map-get($scales-up, lg)) {
+          padding-top: 0 *  map-get($scales-up, lg);
+        }
+      }
+
+      @include bp-up(xl) {
+        @media (max-height: 968px * map-get($scales-up, xl)) {
+          padding-top: 0 *  map-get($scales-up, xl);
+        }
+      }
+
+      @include bp-up(2xl) {
+        @media (max-height: 968px * map-get($scales-up, 2xl)) {
+          padding-top: 0 *  map-get($scales-up, 2xl);
+        }
       }
 
       img {
@@ -69,12 +105,30 @@
       text-align: center;
 
       @include scale((
-        // margin-top: 165px,
-        margin-top: 65px,
+      // margin-top: 165px,
+      margin-top: 65px,
       ), false);
 
       @include bp-up(2xl) {
         margin-top: 165px;
+      }
+
+      @include bp-up(lg) {
+        @media (max-height: 968px * map-get($scales-up, lg)) {
+          margin-top: 65px *  map-get($scales-up, lg);
+        }
+      }
+
+      @include bp-up(xl) {
+        @media (max-height: 968px * map-get($scales-up, xl)) {
+          margin-top: 65px *  map-get($scales-up, xl);
+        }
+      }
+
+      @include bp-up(2xl) {
+        @media (max-height: 968px * map-get($scales-up, 2xl)) {
+          margin-top: 65px *  map-get($scales-up, 2xl);
+        }
       }
     }
   }
