@@ -43,16 +43,16 @@
       display: inline-block;
       // left: -147px;
 
-      left: -85px;
+      // left: -85px;
     }
 
-    @include bp-up(xl) {
-      left: -97px;
-    }
-
-    @include bp-up(2xl) {
-      left: -111px;
-    }
+    // @include bp-up(xl) {
+    //   left: -97px;
+    // }
+    //
+    // @include bp-up(2xl) {
+    //   left: -111px;
+    // }
 
     img {
       @include scale((

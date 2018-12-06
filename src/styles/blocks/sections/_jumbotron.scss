@@ -23,8 +23,13 @@
       padding-top: spacer(4);
 
       @include scale((
-        padding-top: 155px,
+        // padding-top: 155px,
+        padding-top: 65px,
       ), false);
+
+      @include bp-up(2xl) {
+        padding-top: 155px;
+      }
     }
 
     &--windows {
@@ -39,8 +44,13 @@
       }
 
       @include scale((
-        padding-top: 90px,
+        // padding-top: 90px,
+        padding-top: 0,
       ), false);
+
+      @include bp-up(2xl) {
+        padding-top: 90px;
+      }
 
       img {
         display: block;
@@ -59,8 +69,13 @@
       text-align: center;
 
       @include scale((
-        margin-top: 165px,
+        // margin-top: 165px,
+        margin-top: 65px,
       ), false);
+
+      @include bp-up(2xl) {
+        margin-top: 165px;
+      }
     }
   }
 
