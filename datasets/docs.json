@@ -2,7 +2,7 @@
   {
     "id" : "overview",
     "_name" : "docs.overview",
-    "ref" : "//github.com/arrayio/array-io-keychain/wiki"
+    "ref" : "//github.com/arrayio/array-io-keychain/blob/master/README.md"
   },
   {
     "id" : "protocol",
@@ -12,11 +12,11 @@
   {
     "id" : "installation",
     "_name" : "docs.installation",
-    "ref" : "//github.com/arrayio/array-io-keychain/wiki/Installation-guides"
+    "ref" : "//github.com/arrayio/array-io-keychain/wiki#installation-guides"
   },
   {
     "id" : "websocket",
     "_name" : "docs.websocket",
-    "ref" : "//github.com/arrayio/array-io-keychain/wiki/Pipe-API"
+    "ref" : "//github.com/arrayio/array-io-keychain/wiki/WebSocket-API"
   }
 ]
