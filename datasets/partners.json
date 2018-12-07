@@ -2,25 +2,25 @@
   {
     "id" : "icoadmin",
     "_key" : "partners.icoadmin",
-    "ref" : "#",
+    "ref" : "//icoadm.in",
     "icon" : "icoadmin"
   },
   {
     "id" : "velvet",
     "_key" : "partners.velvet",
-    "ref" : "#",
+    "ref" : "//velvet.exchange",
     "icon" : "velvet"
   },
   {
     "id" : "swap",
     "_key" : "partners.swap",
-    "ref" : "#",
+    "ref" : "//swap.online",
     "icon" : "swap"
   },
   {
     "id" : "jurry",
     "_key" : "partners.jurry",
-    "ref" : "#",
+    "ref" : "//jury.online/",
     "icon" : "jurry"
   }
 ]
