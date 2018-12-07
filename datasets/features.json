@@ -2,21 +2,25 @@
   {
     "name" : "independent",
     "_name" : "features.indep.name",
-    "_descr" : "features.indep.descr"
+    "_descr" : "features.indep.descr",
+    "ref" : "//github.com/arrayio/array-io-keychain/wiki/Key-Features#independent"
   },
   {
     "name" : "secure",
     "_name" : "features.secure.name",
-    "_descr" : "features.secure.descr"
+    "_descr" : "features.secure.descr",
+    "ref" : "//github.com/arrayio/array-io-keychain/wiki/Key-Features#secure"
   },
   {
     "name" : "isolated",
     "_name" : "features.isolated.name",
-    "_descr" : "features.isolated.descr"
+    "_descr" : "features.isolated.descr",
+    "ref" : "//github.com/arrayio/array-io-keychain/wiki/Key-Features#isolated"
   },
   {
     "name" : "friendly",
     "_name" : "features.friend.name",
-    "_descr" : "features.friend.descr"
+    "_descr" : "features.friend.descr",
+    "ref" : "//github.com/arrayio/array-io-keychain/wiki/Key-Features#friendly"
   }
 ]

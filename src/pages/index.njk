@@ -124,14 +124,23 @@
 
         <ul class="col-12 col-md-6 col-lg-12 mb-4 mb-lg-6">
           {% set types = [
-            'pages.home.paragraphs.integration.doc_types.installation' | __ | capitalizeFirst,
-            'pages.home.paragraphs.integration.doc_types.websocket' | __ | capitalizeFirst,
-            'pages.home.paragraphs.integration.doc_types.pipe' | __ | capitalizeFirst
+            {
+              name: 'pages.home.paragraphs.integration.doc_types.installation' | __ | capitalizeFirst,
+              ref: '//github.com/arrayio/array-io-keychain/wiki#installation-guides'
+            },
+            {
+              name: 'pages.home.paragraphs.integration.doc_types.websocket' | __ | capitalizeFirst,
+              ref: '//github.com/arrayio/array-io-keychain/wiki/WebSocket-API'
+            },
+            {
+              name: 'pages.home.paragraphs.integration.doc_types.pipe' | __ | capitalizeFirst,
+              ref: '//github.com/arrayio/array-io-keychain/wiki/Pipe-API'
+            }
             ] %}
 
             {% for type in types %}
               <li>
-                {{ type }}
+                <a href="{{ type.ref }}">{{ type.name }}</a>
               </li>
             {% endfor %}
         </ul>

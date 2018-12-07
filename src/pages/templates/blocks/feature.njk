@@ -9,7 +9,7 @@
   <p class="feature__descr">{{ item._descr | __ | capitalizeFirst }}</p>
 
   <p class="feature__more">
-    <a href="" class="btn btn-outline-contrast">learn more</a>
+    <a href="{{ item.ref }}" class="btn btn-outline-contrast">learn more</a>
   </p>
 </div>
 {% endmacro %}
