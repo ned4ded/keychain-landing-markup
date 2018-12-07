@@ -16,7 +16,8 @@
     "overview" : "overview",
     "protocol" : "KeyChain Protocol",
     "installation" : "installations guides",
-    "websocket" : "WebSocket API"
+    "websocket" : "WebSocket API",
+    "coc" : "Code of Conduct"
   },
   "features" : {
     "indep" : {

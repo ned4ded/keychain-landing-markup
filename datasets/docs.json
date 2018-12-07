@@ -18,5 +18,10 @@
     "id" : "websocket",
     "_name" : "docs.websocket",
     "ref" : "//github.com/arrayio/array-io-keychain/wiki/WebSocket-API"
+  },
+  {
+    "id" : "coc",
+    "_name" : "docs.coc",
+    "ref" : "//github.com/arrayio/array-io-keychain/blob/master/CODE_OF_CONDUCT.md"
   }
 ]
