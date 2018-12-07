@@ -4,24 +4,31 @@
   <div class="row">
     <div class="col-12">
 
-      <nav class="navbar navbar--header">
-        <a href="/" class="brand navbar__brand">
+      <nav class="navbar navbar--header navbar-expand-lg">
+        <a href="/" class="brand navbar__brand navbar-brand">
           <img src="assets/imgs/kch-brand-logo.png" alt="Keychain Logotype" width="{{ 375 * 0.75 }}" height="{{ 144 * 0.75 }}">
         </a>
 
-        <ul class="navbar__nav">
-          {% for item in nav %}
-          <li class="navbar__nav-item">
-            <a href="{{ item.ref }}" class="navbar__link{{ ' navbar__link--active' if page === item.name }}">
-              {% if item._key %}
-              {{ item._key | __ | capitalizeFirst }}
-              {% else %}
-              {{ item.name | capitalizeFirst }}
-              {% endif %}
-            </a>
-          </li>
-          {% endfor %}
-        </ul>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-menu" aria-controls="navbar-menu" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div id="navbar-menu" class="collapse navbar-collapse navbar__collapse">
+          <ul class="navbar__nav">
+            {% for item in nav %}
+            <li class="navbar__nav-item">
+              <a href="{{ item.ref }}" class="navbar__link{{ ' navbar__link--active' if page === item.name }}">
+                {% if item._key %}
+                {{ item._key | __ | capitalizeFirst }}
+                {% else %}
+                {{ item.name | capitalizeFirst }}
+                {% endif %}
+              </a>
+            </li>
+            {% endfor %}
+          </ul>
+        </div>
+
       </nav>
 
     </div>

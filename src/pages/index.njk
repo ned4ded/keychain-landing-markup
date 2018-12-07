@@ -1,4 +1,5 @@
 {% import "blocks/feature.njk" as feature %}
+{% import "lib/swiper.njk" as swiper %}
 
 {% set page = 'home' %}
 
@@ -11,6 +12,12 @@
 {% extends "layout.njk" %}
 
 {% block content %}
+<div class="container-fluid">
+  <div class="row d-flex d-lg-none">
+    <a href="//array.io" class="d-block col-12 bg-secondary text-center p-4 text-dark text-lg">Mobile version of KeyChain is coming soon. <strong>Download</strong> the app on your desktop</a>
+  </div>
+</div>
+
 <div class="container">
   <div class="row justify-content-center mt-5 mt-lg-10">
     <div class="col-12 col-lg-9">
@@ -52,47 +59,58 @@
         </ul>
     </div>
 
-    <div class="col-12 mb-7 mb-lg-9">
+    <div class="col-12">
       <div class="page-home__feedback">
-        <h2 class="text-center font-weight-bold mb-4 mb-lg-6">
+        <h2 class="text-center font-weight-bold mb-4">
           {{ 'pages.home.headings.testimonials' | __ | capitalizeFirst }}
         </h2>
 
         <p class="text-center text-light mb-6">
           {{ 'pages.home.paragraphs.testimonials.question' | __ | capitalizeFirst }}
         </p>
-
-        <ul class="p-0">
-          {% set customers = datasets.get('partners') %}
-
-          {% for c in customers %}
-
-            {% macro t(c, v) %}{{ (c._key + '.' + v) | __ }}{% endmacro %}
-
-            <li>
-              <div class="feedback">
-                <div class="feedback__block feedback__block--header">
-                  <span class="feedback__icon {{ 'feedback__icon--' + c.id }}"></span>
-
-                  <p class="feedback__customer">
-                    <a href="{{ c.ref }}" class="feedback__customer-name">{{ t(c, 'name') | capitalizeFirst }}</a> <span class="feedback__customer-about">{{ t(c, 'about') | capitalizeFirst }}</span>
-                  </p>
-                </div>
-
-                <blockquote class="feedback__block feedback__block--quote feedback__quote">
-                  <p class="feedback__quote-text">{{ t(c, 'feedback') | capitalizeFirst }}</p>
-
-                  <footer class="feedback__quote-footer">
-                    {% if t(c, 'author') != 0 %}{{ t(c, 'author') }}{% endif %}{% if t(c, 'author_job') != 0 %}, {{ t(c, 'author_job') }}{% endif %}
-                  </footer>
-                </blockquote>
-              </div>
-            </li>
-          {% endfor %}
-        </ul>
       </div>
     </div>
+  </div>
+</div>
 
+<div class="container-fluid page-home__carousel mb-7 mb-lg-9">
+  {% set customers = datasets.get('partners') %}
+  {% set slides = [] %}
+  {% set options = { wrapper: 'container'} %}
+
+  {% for c in customers %}
+
+  {% macro t(c, v) %}{{ (c._key + '.' + v) | __ }}{% endmacro %}
+
+  {% set customer %}
+  <div class="feedback">
+    <div class="feedback__block feedback__block--header">
+      <span class="feedback__icon {{ 'feedback__icon--' + c.id }}"></span>
+
+      <p class="feedback__customer">
+        <a href="{{ c.ref }}" class="feedback__customer-name">{{ t(c, 'name') | capitalizeFirst }}</a> <span class="feedback__customer-about">{{ t(c, 'about') | capitalizeFirst }}</span>
+      </p>
+    </div>
+
+    <blockquote class="feedback__block feedback__block--quote feedback__quote">
+      <p class="feedback__quote-text">{{ t(c, 'feedback') | capitalizeFirst }}</p>
+
+      <footer class="feedback__quote-footer">
+        {% if t(c, 'author') != 0 %}{{ t(c, 'author') }}{% endif %}{% if t(c, 'author_job') != 0 %}, {{ t(c, 'author_job') }}{% endif %}
+      </footer>
+    </blockquote>
+  </div>
+  {% endset %}
+
+  {{ slides | addToArray(customer) }}
+
+  {% endfor %}
+
+  {{ swiper.make(slides, options) }}
+</div>
+
+<div class="container">
+  <div class="row">
     <div class="col-12 mb-7 mb-lg-9">
       <div class="row justify-content-center page-home__integration">
 

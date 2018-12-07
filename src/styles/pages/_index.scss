@@ -83,8 +83,6 @@
   }
 
   &__feedback {
-    $li-m: 80px;
-
     h2 {
       padding-top: 70px;
       position: relative;
@@ -128,27 +126,111 @@
         }
       }
     }
+  }
 
-    ul {
-      display: flex;
-      flex-flow: row wrap;
+  &__carousel {
+    position: relative;
 
-      width: 100%;
-      margin: -$li-m 0;
-
-      list-style: none;
-    }
-
-    li {
-      display: inline-flex;
-      align-items: center;
-      flex-direction: column;
-
-      width: 100%;
-      margin: $li-m 0;
+    .swiper-slide {
+      height: auto;
 
       @include bp-up(lg) {
         width: 50%;
+      };
+    }
+
+    .swiper-container {
+      position: static;
+
+      overflow: visible;
+    }
+
+    .swiper-wrapper {
+      padding-right: 0;
+      padding-left: 0;
+
+      @include bp-up(sm) {
+        padding-right: inherit;
+        padding-left: inherit;
+      }
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      top: 0;
+
+      margin-top: 0;
+
+      width: 100px;
+      height: 100%;
+
+      background-image: none;
+
+      &:before {
+        position: absolute;
+        top: 50%;
+        left: 10px;
+
+        display: block;
+
+        width: 50px;
+        height: 50px;
+
+        content: '';
+        transition: background-color .3s ease-in;
+        transform: translateY(-50%);
+
+        border-radius: 100%;
+        background-color: transparent;
+      }
+    }
+
+    .swiper-button-next {
+      right: 0;
+
+      background-size: 100%;
+
+      @include bp-up(lg) {
+        background-image: linear-gradient(to left, $white 50px, transparent);
+      }
+
+      &:before {
+        right: 10px;
+        left: auto;
+
+        background-image: url('../assets/imgs/icon-arrow-right.png');
+        background-repeat: no-repeat;
+        background-position: 50%;
+        background-size: auto;
+      }
+
+      &:hover:before {
+        background-color: rgba(#5dccf5, .3);
+        transition: background-color .05s ease-in;
+      }
+    }
+
+    .swiper-button-prev {
+      left: 0;
+
+      background-size: 100%;
+
+      @include bp-up(lg) {
+        background-image: linear-gradient(to right, $white 50px, transparent);
+      }
+
+      &:before {
+        left: 10px;
+
+        background-image: url('../assets/imgs/icon-arrow-left.png');
+        background-repeat: no-repeat;
+        background-position: 50%;
+        background-size: auto;
+      }
+
+      &:hover:before {
+        background-color: rgba(#5dccf5, .3);
+        transition: background-color .05s ease-in;
       }
     }
   }

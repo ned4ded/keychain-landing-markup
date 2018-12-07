@@ -3,40 +3,79 @@
   $navbar-link-p-x-xl: spacer(3) + spacer(2);
 
   display: inline-flex;
-  justify-content: center;
+  justify-content: space-between;
 
   width: 100%;
 
-  @include bp-up(lg) {
-    justify-content: space-between;
-  }
+  z-index: 1;
 
   @include scale((
     min-height: 70px,
   ));
 
+  &__collapse {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+
+    width: calc(100vw - 17px);
+    min-width: calc(100% + #{$grid-gutter-width * 2});
+    padding: 0 ($grid-gutter-width * 2);
+
+    background-color: darken(theme-color(), 10%);
+
+    transform: translateX(-50%);
+
+    @include bp-up(lg) {
+      position: static;
+
+      width: 100%;
+      min-width: 0;
+      padding: 0;
+
+      transform: translateX(0);
+
+      background-color: transparent;
+    }
+  }
+
 
   &__nav {
     display: inline-flex;
     align-items: center;
+    flex-direction: column;
 
-    margin: 0 -$navbar-link-p-x;
+    width: 100%;
+    margin: 0 (-$navbar-link-p-x);
     padding: 0;
 
     list-style: none;
 
     color: $white;
 
+    @include bp-up(lg) {
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+
     @include scale((
       margin-right: -$navbar-link-p-x-xl,
       margin-left: -$navbar-link-p-x-xl,
     ), false);
 
-    &-item {}
+    &-item {
+      height: 100%;
+      width: 100%;
+
+      @include bp-up(lg) {
+        width: auto;
+        height: auto;
+      }
+    }
   }
 
   &__brand {
-    display: none;
+    // display: none;
 
     @include bp-up(lg) {
       position: relative;
@@ -63,11 +102,19 @@
   }
 
   &__link {
+    display: inline-block;
+
+    width: 100%;
     padding: spacer(3) $navbar-link-p-x;
 
+    text-align: center;
     text-transform: uppercase;
 
     color: $white;
+
+    @include bp-up(lg) {
+      width: auto;
+    }
 
     @include scale((
       padding-left: $navbar-link-p-x-xl,

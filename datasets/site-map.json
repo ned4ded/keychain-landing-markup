@@ -2,7 +2,7 @@
   {
     "name" : "home",
     "_key" : "nav.home",
-    "ref" : "#"
+    "ref" : "/"
   },
   {
     "name" : "install",

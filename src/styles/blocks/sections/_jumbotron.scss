@@ -5,8 +5,11 @@
 
   @include scale((
     padding-bottom: 110px,
-    min-height: 968px,
   ));
+
+  @include scale((
+    min-height: 968px,
+  ), false);
 
   @include bp-up(lg) {
     @media (max-height: 968px * map-get($scales-up, lg)) {
@@ -27,7 +30,19 @@
   @include bp-up(lg) {
     background-image: url('../assets/imgs/jumbotron-bg-main-part.png'), url('../assets/imgs/jumbotron-bg-subpart.png');
     background-repeat: no-repeat;
-    background-position: 33% 100%, 100% 100%;
+    background-position: 33% 0%, 100% 100%;
+
+    @media (max-height: 968px * map-get($scales-up, lg)) {
+      background-position: 33% 100%, 100% 100%;
+    }
+
+    @media (max-height: 968px * map-get($scales-up, xl)) {
+      background-position: 33% 100%, 100% 100%;
+    }
+
+    @media (max-height: 968px * map-get($scales-up, 2xl)) {
+      background-position: 33% 100%, 100% 100%;
+    }
   }
 
   @include scale((

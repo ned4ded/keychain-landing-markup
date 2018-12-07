@@ -10,5 +10,17 @@
     "_key" : "partners.velvet",
     "ref" : "#",
     "icon" : "velvet"
+  },
+  {
+    "id" : "swap",
+    "_key" : "partners.swap",
+    "ref" : "#",
+    "icon" : "swap"
+  },
+  {
+    "id" : "jurry",
+    "_key" : "partners.jurry",
+    "ref" : "#",
+    "icon" : "jurry"
   }
 ]

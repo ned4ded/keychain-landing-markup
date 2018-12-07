@@ -43,6 +43,11 @@ export function html(done) {
 
       return i18next.t(key);
     }),
+    env => env.addFilter('addToArray', function(array, element) {
+      array.push(element);
+
+      return;
+    }),
   ]
 
   const data = fs.readdirSync( config.paths.datasets ).reduce( (acc, filename) => {

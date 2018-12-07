@@ -81,6 +81,20 @@
       "author" : "Sabir Magdeev",
       "author_job" : "COO"
     },
+    "swap" : {
+      "name" : "Swap.Online",
+      "about" : "Multi-cryptocurrency wallet powered by Atomic Swaps",
+      "feedback" : "KeyChain is a perfect solution for our project. We can assure our users that their assets are stored safely.",
+      "author" : "Alexander Noxon",
+      "author_job" : "founder & CEO"
+    },
+    "jurry" : {
+      "name" : "Jury.Online",
+      "about" : "Decentralized escrow investment platform",
+      "feedback" : "KeyChain is incredibly simple to use. No complicated integration processes and no headaches because of  stolen keys.",
+      "author" : "Igor Mironenko",
+      "author_job" : "tech lead"
+    },
     "velvet" : {
       "name" : "Velvet.Exchange",
       "about" : "Trading platform",
