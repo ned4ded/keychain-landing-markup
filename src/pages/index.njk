@@ -27,7 +27,7 @@
     </div>
   </div>
 
-  <div class="row mt-5 mt-lg-10">
+  <div id="features" class="row mt-5 mt-lg-10">
     <div class="col-12 mb-7 mb-lg-9">
       <h2 class="text-center font-weight-bold mb-4 mb-lg-6">{{ 'pages.home.headings.features' | __ | capitalizeFirst }}</h2>
 
@@ -57,6 +57,16 @@
           </li>
           {% endfor %}
         </ul>
+    </div>
+
+    <div class="col-12 mb-7 mb-lg-9">
+      <h2 class="text-center font-weight-bold mb-4 mb-lg-6">
+        {{ 'pages.home.headings.linuxSecurity' | __ | capitalizeFirst }}
+      </h2>
+
+      <p class="mb-0 page-home__about-text text-lg text-justify">
+        {{ 'pages.home.paragraphs.linuxSecurity' | __ | safe }}
+      </p>
     </div>
 
     <div class="col-12">

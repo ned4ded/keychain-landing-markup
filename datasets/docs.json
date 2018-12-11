@@ -5,6 +5,11 @@
     "ref" : "//github.com/arrayio/array-io-keychain/blob/master/README.md"
   },
   {
+    "id" : "coc",
+    "_name" : "docs.coc",
+    "ref" : "//github.com/arrayio/array-io-keychain/blob/master/CODE_OF_CONDUCT.md"
+  },
+  {
     "id" : "protocol",
     "_name" : "docs.protocol",
     "ref" : "//github.com/arrayio/array-io-keychain/wiki/KeyChain-Protocol"
@@ -18,10 +23,5 @@
     "id" : "websocket",
     "_name" : "docs.websocket",
     "ref" : "//github.com/arrayio/array-io-keychain/wiki/WebSocket-API"
-  },
-  {
-    "id" : "coc",
-    "_name" : "docs.coc",
-    "ref" : "//github.com/arrayio/array-io-keychain/blob/master/CODE_OF_CONDUCT.md"
   }
 ]

@@ -2,7 +2,12 @@
   {
     "name" : "home",
     "_key" : "nav.home",
-    "ref" : "/"
+    "ref" : "./#page-home"
+  },
+  {
+    "name" : "features",
+    "_key" : "nav.features",
+    "ref" : "./#features"
   },
   {
     "name" : "install",

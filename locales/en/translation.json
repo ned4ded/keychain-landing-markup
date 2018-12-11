@@ -2,7 +2,8 @@
   "nav" : {
     "home" : "home",
     "install": "install",
-    "doc": "documentation"
+    "doc": "documentation",
+    "features": "key features"
   },
   "footer" : {
     "docs" : "documentation",
@@ -41,7 +42,7 @@
     "heading" : "an open-source desktop application to manage your private keys",
     "features" : {
       "control" : "complete control over the sensitive information",
-      "vault" : "a vault which never transmits sensitive data",
+      "vault" : "a vault which never transmits private data",
       "storage" : "local host storage of the keys to interact with the project"
     }
   },
@@ -51,7 +52,8 @@
         "features": "key features",
         "qualities": "a perfect solution for blockchain-based projects",
         "testimonials" : "customer testimonials",
-        "integration" : "ready to integrate?"
+        "integration" : "ready to integrate?",
+        "linuxSecurity" : "ensuring security on Linux"
       },
       "paragraphs" : {
         "about" : "<b>KeyChain</b> is a standalone app for signing transactions and generating key pairs. It stores private keys in an isolated environment where no logger, debugger or spyware can intercept them because of the three-layer security protecting each action of the system. KeyChain supports transactions from and to various blockchains, including Ethereum and Ethereum classic, Litecoin, Bitcoin, and Bitshares.",
@@ -60,6 +62,7 @@
           "code" : "our code is open-source and available to you now",
           "offer" : "offer truly decentralized product for Web.3 and change the world of institutional control"
         },
+        "linuxSecurity" : "We look past standard solutions to data protection. As it is well-known, the longer the path, the more chances there are of a password being intercepted. To ensure safe operations in Unix-like OS, we have created a shortcut from you entering a passphrase to the KeyChain processing it. Instead of receiving a passphrase through the X-server, KeyChain gets it directly from the keyboard driver. We exclude the weakest link (X-server) from the process, thus minimizing the risks to your key storage.",
         "testimonials" : {
           "question" : "what did they say about our products?"
         },
