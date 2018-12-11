@@ -1,0 +1,17 @@
+[
+  {
+    "id" : "linux",
+    "name" : "Linux",
+    "ref" : "//github.com/arrayio/array-io-keychain/wiki/KeyChain-security#unix-like-operating-systems"
+  },
+  {
+    "id" : "win",
+    "name" : "Windows",
+    "ref" : "//github.com/arrayio/array-io-keychain/wiki/KeyChain-security#windows"
+  },
+  {
+    "id" : "mac",
+    "name" : "macOS",
+    "ref" : "//github.com/arrayio/array-io-keychain/wiki/KeyChain-security#macos"
+  }
+]

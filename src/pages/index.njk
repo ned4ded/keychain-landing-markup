@@ -60,14 +60,24 @@
     </div>
   </div>
 
-  <div class="row justify-content-center mb-7 mb-lg-9">
+  <div class="row justify-content-center mb-7 mb-lg-9 page-home__security">
     <h2 class="col-9 text-center font-weight-bold mb-4 mb-lg-6">
-      {{ 'pages.home.headings.linuxSecurity' | __ | capitalizeFirst }}
+      {{ 'pages.home.headings.security' | __ | capitalizeFirst }}
     </h2>
 
-    <p class="col-9 mb-0 page-home__about-text text-lg text-justify">
-      {{ 'pages.home.paragraphs.linuxSecurity' | __ | safe }}
+    <p class="col-9 mb-5 mb-lg-6 text-lg text-justify">
+      {{ 'pages.home.paragraphs.security.about' | __ | safe }}
     </p>
+
+    <ul class="col-12 col-md-6 col-lg-12 mb-4 mb-lg-6">
+      {% set links = datasets.get('security') %}
+
+      {% for link in links %}
+        <li>
+          <a href="{{ link.ref }}">{{ link.name }}</a>
+        </li>
+      {% endfor %}
+    </ul>
   </div>
 
   <div class="row">
