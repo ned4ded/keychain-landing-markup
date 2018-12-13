@@ -1,0 +1,24 @@
+<div class="swap-header">
+  <div class="swap-header__container">
+    <a class="swap-logo" href="/">
+       <img src="//swap.online/images/logo_3436dc.svg" alt="swap.online logo">
+    </a>
+
+    <ul class="swap-nav">
+      {% set links = [
+        { name: 'Wallet', ref: '//swap.online/' },
+        { name: 'Exchange', ref: '//swap.online/exchange' },
+        { name: 'History', ref: '//swap.online/history' },
+        { name: 'About Us', ref: '//swap.online/aboutus' },
+        { name: 'Listing', ref: '//listing.swap.online/' },
+        { name: 'Testnet', ref: '//testnet.swap.online' }
+        ] %}
+
+      {% for link in links %}
+        <li>
+          <a href="{{ link.ref }}" class="swap-nav__link">{{ link.name }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>

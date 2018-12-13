@@ -2,10 +2,18 @@
 
 {% extends "layout.njk" %}
 
+{% block links %}
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+{% endblock %}
+
+{% block header %}
+  {% include "partials/swap-header.njk" %}
+{% endblock %}
+
 {% block content %}
 <div class="container-fluid page-install__content">
   <div class="row">
-    <a href="//array.io" class="d-block col-12 bg-secondary text-center p-2 text-dark">Whant to know more about <strong>Array.IO Client?</strong> Check this out!</a>
+    <p href="//array.io" class="d-block col-12 bg-secondary text-center p-2 text-dark">Want to know more about the <strong>KeyChain</strong> app by <strong><a href="//array.io/">Array.IO</a></strong>? Click <a href="//github.com/arrayio/array-io-keychain/wiki">here</a>!</p>
   </div>
 
   <div class="row">
@@ -17,17 +25,32 @@
             <img src="assets/imgs/kch-brand-logo-img.svg" alt="Keychain Logotype" class="mb-5" width="{{ 132 * 1.5}}" height="{{ 123 * 1.5}}">
 
             <h1 class="mb-4">The <span class="text-primary">Keychain</span> App</h1>
-            <p class="mb-7">
-              <a href="#" class="btn btn-primary btn-lg">Download App</a>
+            <p class="mb-0">
+              <a href="//github.com/arrayio/array-io-keychain/releases" data-install class="btn btn-primary btn-lg m-2">Download</a>
             </p>
-            <p class="text-muted mb-0">
-              Don't know where to start? Look into our application's <a href="/">overview</a>.
+            <p data-install-version style="display: none" class="small text-muted">
+            </p>
+
+            <p data-install-fallback class="mt-2 mb-7 text-muted" style="display: none;">
+              Need another version? Visit <a href="//github.com/arrayio/array-io-keychain/releases">the installation page</a>.
+            </p>
+
+            <p class="mt-7 mb-6 text-justify">
+              KeyChain is a standalone app for signing transactions and generating key pairs. It stores private keys in an isolated environment with three-layer security protection making it extremely difficult for loggers, debuggers or spyware to intercept them. KeyChain supports transactions from/to various blockchains, including Ethereum and Ethereum classic, Litecoin, Bitcoin, and Bitshares.
+            </p>
+            <p class="mb-0 font-weight-bold">
+              Get started with the installation guides for <a href="//github.com/arrayio/array-io-keychain/wiki/Installation-guide-for-macOS">macOS</a>, <a href="//github.com/arrayio/array-io-keychain/wiki/Installation-guide-for-Windows">Windows</a>, and <a href="//github.com/arrayio/array-io-keychain/wiki/Installation-guide-for-Linux">Linux</a>
             </p>
           </div>
         </div>
       </div>
-      
+
     </div>
   </div>
 </div>
+{% endblock %}
+
+
+{% block footer %}
+  {% include "partials/swap-footer.njk" %}
 {% endblock %}

@@ -8,3 +8,24 @@
 // 	font-weight: 400;
 // 	font-style: normal;
 // }
+
+@font-face {
+  font-family: 'CerebriSans';
+  src: url('../assets/fonts/CerebriSans-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CerebriSans SemiBold';
+  src: url('../assets/fonts/CerebriSans-SemiBold.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CerebriSans Bold';
+  src: url('../assets/fonts/CerebriSans-Bold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}

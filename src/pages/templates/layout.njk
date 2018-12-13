@@ -6,7 +6,7 @@
 <head>
   <meta charset="{{ m.charset }}">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>{{ meta.title }}</title>
+  <title>{{ m.title }}</title>
   <meta name="description" content="{{ m.description }}">
   <meta name="viewport" content="width=500, user-scalable=no">
 
@@ -22,6 +22,8 @@
   <link rel="shortcut icon" href="favicon.ico">
 
   <link rel="stylesheet" href="css/main.css">
+
+  {% block links %}{% endblock %}
 </head>
 
 <body id="{{ 'page-' + page if page }}" class="{{ 'page-' + page if page }}">
@@ -41,7 +43,9 @@
 
   {% block content %} {% endblock %}
 
-  {% include "partials/footer.njk" %}
+  {% block footer %}
+    {% include "partials/footer.njk" %}
+  {% endblock %}
 
   <script src="js/vendor.js" charset="utf-8"></script>
   <script src="js/main.js" charset="utf-8"></script>
