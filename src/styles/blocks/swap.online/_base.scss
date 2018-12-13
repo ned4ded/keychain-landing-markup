@@ -4,15 +4,14 @@
 .swap-logo {
   height: 30px;
 
-  @include scale((
-    width: 32px,
-    min-width: 32px,
-    height: 30px
-  ));
-
   width: 100%;
 
   display: block;
+
+  @include bp-up(lg) {
+    width: 32px;
+    min-width: 32px;
+  }
 
   img {
     display: block;

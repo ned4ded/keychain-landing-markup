@@ -12,21 +12,13 @@
     max-width: 1200px;
     height: 100%;
     margin: 0 auto;
-
-    @include scale((
-      padding-right: 30px,
-      padding-left: 30px,
-      padding-top: 5px,
-      padding-bottom: 5px,
-    ));
+    padding: 5px 30px;
   }
 
   &__block {
     width: 50%;
+    margin-bottom: 40px;
 
-    @include scale((
-      margin-bottom: 40px,
-    ));
     @include bp-up(lg) {
       width: auto;
     }
@@ -85,11 +77,8 @@
     color: #E72BB3;
 
     font-weight: bold;
-
-    @include scale((
-      font-size: 24px,
-      margin-bottom: 10px
-    ));
+    font-size: 24px;
+    margin-bottom: 10px;
   }
 
   a {
@@ -103,10 +92,8 @@
 
     line-height: 1;
 
-    @include scale((
-      font-size: 14px,
-      margin-bottom: 10px
-    ));
+    font-size: 14px;
+    margin-bottom: 10px;
 
     &:hover {
       color: #e91db4;
@@ -114,9 +101,7 @@
   }
 
   span {
-    @include scale((
-      font-size: 16px,
-      margin-top: 12px,
-    ));
+    font-size: 16px;
+    margin-top: 12px;
   }
 }
