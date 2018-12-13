@@ -333,7 +333,7 @@ $( document ).ready(() => {
   const ref = OS[window.browserInfo.os.name];
 
   if(ref) {
-    $( Selectors.INSTALL ).attr('href', ref);
+    $( Selectors.INSTALL ).attr('href', ref.ref);
 
     $( Selectors.VERSION ).text(`Version: ${ ref.name }`).show()
 
