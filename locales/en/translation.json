@@ -104,7 +104,9 @@
     "velvet" : {
       "name" : "Velvet.Exchange",
       "about" : "Trading platform",
-      "feedback" : "We wanted to build the exchange which doesn’t store our clients keys. KeyChain solved this issue for us and now we our proud users of it."
+      "feedback" : "We wanted to build the exchange which doesn’t store our clients keys. KeyChain solved this issue for us and now we our proud users of it.",
+      "author" : "Anastasia Chokan",
+      "author_job" : "CEO"
     }
   },
   "util" : {
