@@ -63,7 +63,7 @@
           "offer" : "offer truly decentralized product for Web.3 and change the world of institutional control"
         },
         "security" : {
-          "about" : "we look past standard solutions to data protection. As it is well-known, the longer the path, the more chances there are of a password being intercepted. To ensure safe operations in Unix-like OS, we have created a shortcut from you entering a passphrase to the KeyChain processing it. Instead of receiving a passphrase through the X-server, KeyChain gets it directly from the keyboard driver. We exclude the weakest link (X-server) from the process, thus minimizing the risks to your key storage."
+          "about" : "We look past standard solutions to data protection. As is well-known, the longer the path, the more chances there are of passwords being intercepted. To ensure safe operations in Unix-like OS, we have created a shortcut from you entering a passphrase to the KeyChain processing it. To protect Windows users, we employ the mechanism that allows the processes to run separately without letting any one of them to interfere with another - a technology that is inherent to macOS."
         },
         "testimonials" : {
           "question" : "what did they say about our products?"
