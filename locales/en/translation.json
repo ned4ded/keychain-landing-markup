@@ -44,6 +44,24 @@
       "control" : "complete control over the sensitive information",
       "vault" : "a vault which never transmits private data",
       "storage" : "easy key management with localhost access"
+    },
+    "layers" : {
+      "representation": {
+        "name" : "representation layer",
+        "descr" : "KeyChain’s UI window allows you to securely create and interact with your keys. It is initiated through the Security layer."
+      },
+      "signing": {
+        "name" : "signing module",
+        "descr" : "a mezo-structure which interacts with the Security layer and unlocks the keys once the correct passphrase has been given to KeyChain."
+      },
+      "security": {
+        "name" : "security layer",
+        "descr" : "KeyChain’s ace in the sleeve! It provides the safest communication channel between the user and Keychain. It is an OS specific structure and interacts with the system itself without any external exposure."
+      },
+      "api": {
+        "name" : "API layer",
+        "descr" : "a language neutral layer which integrates with your app or website. It transmits and parses commands for a given API through pipes and websocket."
+      }
     }
   },
   "pages" : {

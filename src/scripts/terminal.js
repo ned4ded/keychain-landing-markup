@@ -3,7 +3,7 @@ import 'bootstrap';
 import Swiper from 'swiper';
 
 $( document ).ready(() => {
-  Array.from(document.querySelectorAll('[data-carousel="swiper"]')).forEach(n => new Swiper(n, {
+  Array.from(document.querySelectorAll('#partners-carousel')).forEach(n => new Swiper(n, {
     loop: true,
     slidesPerView: 'auto',
     centeredSlides: false,
@@ -14,6 +14,27 @@ $( document ).ready(() => {
       nextEl: '.swiper-button-next',
     },
   }));
+
+  const screenshots = new Swiper($('#screenshots-carousel'), {
+    loop: false,
+    slidesPerView: 1,
+    initialSlide: 1,
+    // autoplay: true,
+    navigation: {
+      prevEl: '.swiper-button-prev',
+      nextEl: '.swiper-button-next',
+    },
+  });
+
+  $('#modal').on('shown.bs.modal', function(e) {
+    const item = $( e.relatedTarget ).data('carouselItem');
+
+    screenshots.update();
+
+    screenshots.slideTo(item, 500);
+
+    return;
+  });
 
   ;(function (window, document, undefined) {
       "use strict";

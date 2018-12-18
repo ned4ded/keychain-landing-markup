@@ -98,7 +98,7 @@
 <div class="container-fluid page-home__carousel mb-7 mb-lg-9">
   {% set customers = datasets.get('partners') %}
   {% set slides = [] %}
-  {% set options = { wrapper: 'container'} %}
+  {% set options = { wrapper: 'container', id: 'partners-carousel'} %}
 
   {% for c in customers %}
 
@@ -175,4 +175,42 @@
 
   </div>
 </div>
+
+{% set modalContent %}
+<div class="page-home__screenshots">
+{% set slides = [] %}
+{% set options = { id: 'screenshots-carousel'} %}
+{% set layers = datasets.get('layers') %}
+
+{% for l in layers %}
+
+  {% set layer %}
+  <div class="layer">
+    <img class="layer__img" src="{{ l.src }}" alt="{{ l._name | __ | capitalizeFirst }}" width="500">
+
+    <div class="layer__content">
+      <p class="layer__name">
+        {{ l._name | __ | capitalizeFirst }}
+      </p>
+
+      <p class="layer__descr">
+        {{ l._descr | __ | capitalizeFirst }} <a href="{{ l.ref }}">{{ 'util.more' | __ | capitalizeFirst }}</a>
+      </p>
+    </div>
+  </div>
+  {% endset %}
+
+  {{ slides | addToArray(layer) }}
+{% endfor %}
+
+{{ swiper.make(slides, options) }}
+</div>
+{% endset %}
+
+{% set modal = {
+  id: 'modal',
+  content: modalContent
+} %}
+
+{{ modals | addToArray(modal) }}
 {% endblock %}

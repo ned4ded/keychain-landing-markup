@@ -358,4 +358,87 @@
       }
     }
   }
+
+  &__screenshots {
+    min-height: 500px;
+
+    .swiper-wrapper {
+      align-items: stretch;
+    }
+
+    .swiper-slide {
+      height: auto;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      top: 0;
+
+      margin-top: 0;
+
+      width: 100px;
+      height: 100%;
+
+      background-image: none;
+
+      &:before {
+        position: absolute;
+        top: 50%;
+        left: 10px;
+
+        display: block;
+
+        width: 50px;
+        height: 50px;
+
+        content: '';
+        transition: background-color .3s ease-in;
+        transform: translateY(-50%);
+
+        border-radius: 100%;
+        background-color: transparent;
+      }
+    }
+
+    .swiper-button-next {
+      right: 0;
+
+      background-size: 100%;
+
+      &:before {
+        right: 10px;
+        left: auto;
+
+        background-image: url('../assets/imgs/icon-arrow-right.png');
+        background-repeat: no-repeat;
+        background-position: 50%;
+        background-size: auto;
+      }
+
+      &:hover:before {
+        background-color: rgba(#5dccf5, .3);
+        transition: background-color .05s ease-in;
+      }
+    }
+
+    .swiper-button-prev {
+      left: 0;
+
+      background-size: 100%;
+
+      &:before {
+        left: 10px;
+
+        background-image: url('../assets/imgs/icon-arrow-left.png');
+        background-repeat: no-repeat;
+        background-position: 50%;
+        background-size: auto;
+      }
+
+      &:hover:before {
+        background-color: rgba(#5dccf5, .3);
+        transition: background-color .05s ease-in;
+      }
+    }
+  }
 }

@@ -1,0 +1,30 @@
+[
+  {
+    "id" : "representation",
+    "_name" : "jumbotron.layers.representation.name",
+    "_descr" : "jumbotron.layers.representation.descr",
+    "ref" : "//github.com/arrayio/array-io-keychain#how-it-works",
+    "src" : "assets/imgs/jumbotron-w-1.jpg"
+  },
+  {
+    "id" : "signing",
+    "_name" : "jumbotron.layers.signing.name",
+    "_descr" : "jumbotron.layers.signing.descr",
+    "ref" : "//github.com/arrayio/array-io-keychain#how-it-works",
+    "src" : "assets/imgs/jumbotron-w-2.jpg"
+  },
+  {
+    "id" : "security",
+    "_name" : "jumbotron.layers.security.name",
+    "_descr" : "jumbotron.layers.security.descr",
+    "ref" : "//github.com/arrayio/array-io-keychain#how-it-works",
+    "src" : "assets/imgs/jumbotron-w-3.jpg"
+  },
+  {
+    "id" : "api",
+    "_name" : "jumbotron.layers.api.name",
+    "_descr" : "jumbotron.layers.api.descr",
+    "ref" : "//github.com/arrayio/array-io-keychain#how-it-works",
+    "src" : "assets/imgs/jumbotron-w-4.jpg"
+  }
+]
