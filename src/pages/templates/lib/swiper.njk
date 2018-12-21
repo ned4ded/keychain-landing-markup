@@ -2,7 +2,7 @@
 
 {% macro make(slides, options) %}
   <div class="swiper-button-prev{{helpers.parse(options.btnPrev)}}"></div>
-  
+
   <div id="{{ options.id }}" data-carousel="swiper" class="swiper-container{{ helpers.parse(options.container) }}">
     <div class="swiper-wrapper{{ helpers.parse(options.wrapper) }}">
       {% for item in slides %}
