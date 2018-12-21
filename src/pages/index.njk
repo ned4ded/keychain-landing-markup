@@ -98,7 +98,7 @@
 <div class="container-fluid page-home__carousel mb-7 mb-lg-9">
   {% set customers = datasets.get('partners') %}
   {% set slides = [] %}
-  {% set options = { wrapper: 'container', id: 'partners-carousel'} %}
+  {% set options = { wrapper: 'container', id: 'partners-carousel', btnNext: 'partners-button-next', btnPrev: 'partners-button-prev'} %}
 
   {% for c in customers %}
 
@@ -179,7 +179,7 @@
 {% set modalContent %}
 <div class="page-home__screenshots">
 {% set slides = [] %}
-{% set options = { id: 'screenshots-carousel'} %}
+{% set options = { id: 'screenshots-carousel', btnNext: 'screenshots-button-next', btnPrev: 'screenshots-button-prev' } %}
 {% set layers = datasets.get('layers') %}
 
 {% for l in layers %}

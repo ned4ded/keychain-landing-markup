@@ -25,6 +25,6 @@
     "_name" : "jumbotron.layers.representation.name",
     "_descr" : "jumbotron.layers.representation.descr",
     "ref" : "//github.com/arrayio/array-io-keychain#how-it-works",
-    "src" : "assets/imgs/jumbotron-w-4.jpg"
+    "src" : "assets/imgs/jumbotron-w-4.png"
   }
 ]

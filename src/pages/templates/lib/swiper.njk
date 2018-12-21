@@ -1,6 +1,8 @@
 {% import "lib/helpers.njk" as helpers %}
 
 {% macro make(slides, options) %}
+  <div class="swiper-button-prev{{helpers.parse(options.btnPrev)}}"></div>
+  
   <div id="{{ options.id }}" data-carousel="swiper" class="swiper-container{{ helpers.parse(options.container) }}">
     <div class="swiper-wrapper{{ helpers.parse(options.wrapper) }}">
       {% for item in slides %}
@@ -10,7 +12,7 @@
       {% endfor %}
     </div>
 
-    <div class="swiper-button-prev{{helpers.parse(options.btnPrev)}}"></div>
-    <div class="swiper-button-next{{helpers.parse(options.btnNext)}}"></div>
   </div>
+
+  <div class="swiper-button-next{{helpers.parse(options.btnNext)}}"></div>
 {% endmacro %}

@@ -388,8 +388,8 @@
 
         display: block;
 
-        width: 50px;
-        height: 50px;
+        width: 60px;
+        height: 60px;
 
         content: '';
         transition: background-color .3s ease-in;
@@ -401,7 +401,7 @@
     }
 
     .swiper-button-next {
-      right: 0;
+      right: -100px;
 
       background-size: 100%;
 
@@ -411,18 +411,20 @@
 
         background-image: url('../assets/imgs/icon-arrow-right.png');
         background-repeat: no-repeat;
-        background-position: 50%;
+        background-position: 53% 50%;
         background-size: auto;
+
+        background-color: rgba(#5dccf5, .3);
       }
 
       &:hover:before {
-        background-color: rgba(#5dccf5, .3);
+        background-color: rgba(#5dccf5, .6);
         transition: background-color .05s ease-in;
       }
     }
 
     .swiper-button-prev {
-      left: 0;
+      left: -100px;
 
       background-size: 100%;
 
@@ -431,12 +433,14 @@
 
         background-image: url('../assets/imgs/icon-arrow-left.png');
         background-repeat: no-repeat;
-        background-position: 50%;
+        background-position: 46% 50%;
         background-size: auto;
+
+        background-color: rgba(#5dccf5, .3);
       }
 
       &:hover:before {
-        background-color: rgba(#5dccf5, .3);
+        background-color: rgba(#5dccf5, .6);
         transition: background-color .05s ease-in;
       }
     }

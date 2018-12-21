@@ -170,257 +170,360 @@
   }
 
   &__window {
+    $windows: (
+      1 : (
+        top: 136px,
+        left: 75px,
+        width: 392px,
+        height: 210px,
+        src: '../assets/imgs/jumbotron-w-1.jpg'
+      ),
+      2 : (
+        top: 167px,
+        left: 117px,
+        width: 375px,
+        height: 214px,
+        src: '../assets/imgs/jumbotron-w-2.jpg'
+      ),
+      3 : (
+        top: 194px,
+        left: 175px,
+        width: 383px,
+        height: 210px,
+        src: '../assets/imgs/jumbotron-w-3.jpg'
+      ),
+      4 : (
+        top: 226px,
+        left: 236px,
+        width: 356px,
+        height: 223px,
+        src: '../assets/imgs/jumbotron-w-4-no-tooltip.jpg'
+      )
+    );
+
+    $hover: (
+      top: 10px,
+      left: -75px,
+      width: 75px
+    );
+
+    @function get-hover($name) {
+      @return map-get($hover, $name);
+    }
+
+    padding: 0;
+    margin: 0;
     display: block;
 
     position: absolute;
 
-    cursor: pointer;
-    transition: all .1s ease-in;
     transform: skewY(-14deg);
 
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    background-size: 100%;
+    &-link {
+      display: block;
+      height: 100%;
 
-    &:nth-child(1) {
-      $top: 136px;
-      $left: 75px;
-      $w: 392px;
+      cursor: pointer;
+      transition: all .1s ease-in;
 
-      background-image: url('../assets/imgs/jumbotron-w-1.jpg');
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-size: 100%;
+      position: absolute;
 
-      @include scale((
-        top: $top,
-        left: $left,
-        width: $w,
-        height: 210px,
-        background-size: $w,
-      ));
+      top: 0;
+      left: 0;
 
-      @include bp-up(lg) {
-        @media (max-height: 968px * map-get($scales-up, lg)) {
-          top: $top - (100px * map-get($scales-up, lg));
-        }
+      border-radius: 5px;
+
+      &:hover,
+      &--hover {
+        left: get-hover(left);
       }
+    }
 
-      @include bp-up(xl) {
-        @media (max-height: 968px * map-get($scales-up, xl)) {
-          top: $top - (100px * map-get($scales-up, xl));
-        }
-      }
+    &:hover &-link {
+      left: get-hover(left);
+    }
 
-      @include bp-up(2xl) {
-        @media (max-height: 968px * map-get($scales-up, 2xl)) {
-          top: $top - (100px * map-get($scales-up, 2xl));
-        }
-      }
-
-      &:hover {
+    @each $name, $props in $windows {
+      &:nth-child(#{$name}) {
         @include scale((
-          top: $top + 10px,
-          left: $left - 75px,
-          width: $w + 75px,
+          top: map-get($props, top),
+          left: map-get($props, left),
+          width: map-get($props, width) + get-hover(width),
+          height: map-get($props, height),
+          background-size: map-get($props, width),
         ));
 
         @include bp-up(lg) {
           @media (max-height: 968px * map-get($scales-up, lg)) {
-            top: $top - ((100px - 10px) * map-get($scales-up, lg));
+            top: map-get($props, top) - (100px * map-get($scales-up, lg));
           }
         }
 
         @include bp-up(xl) {
           @media (max-height: 968px * map-get($scales-up, xl)) {
-            top: $top - ((100px - 10px) * map-get($scales-up, xl));
+            top: map-get($props, top) - (100px * map-get($scales-up, xl));
           }
         }
 
         @include bp-up(2xl) {
           @media (max-height: 968px * map-get($scales-up, 2xl)) {
-            top: $top - ((100px - 10px) * map-get($scales-up, 2xl));
+            top: map-get($props, top) - (100px * map-get($scales-up, 2xl));
           }
         }
       }
-    }
 
-    &:nth-child(2) {
-      $top: 167px;
-      $left: 117px;
-      $w: 375px;
+      &:nth-child(#{$name}) &-link {
+        background-image: url(map-get($props, src));
 
-      background-image: url('../assets/imgs/jumbotron-w-2.jpg');
-
-      @include scale((
-        top: $top,
-        left: $left,
-        width: $w,
-        height: 214px,
-        background-size: $w,
-      ));
-
-      @include bp-up(lg) {
-        @media (max-height: 968px * map-get($scales-up, lg)) {
-          top: $top - (100px * map-get($scales-up, lg));
-        }
-      }
-
-      @include bp-up(xl) {
-        @media (max-height: 968px * map-get($scales-up, xl)) {
-          top: $top - (100px * map-get($scales-up, xl));
-        }
-      }
-
-      @include bp-up(2xl) {
-        @media (max-height: 968px * map-get($scales-up, 2xl)) {
-          top: $top - (100px * map-get($scales-up, 2xl));
-        }
-      }
-
-      &:hover {
         @include scale((
-          top: $top + 10px,
-          left: $left - 75px,
-          width: $w + 75px,
+          width: map-get($props, width),
+          background-size: map-get($props, width),
         ));
-
-        @include bp-up(lg) {
-          @media (max-height: 968px * map-get($scales-up, lg)) {
-            top: $top - ((100px - 10px) * map-get($scales-up, lg));
-          }
-        }
-
-        @include bp-up(xl) {
-          @media (max-height: 968px * map-get($scales-up, xl)) {
-            top: $top - ((100px - 10px) * map-get($scales-up, xl));
-          }
-        }
-
-        @include bp-up(2xl) {
-          @media (max-height: 968px * map-get($scales-up, 2xl)) {
-            top: $top - ((100px - 10px) * map-get($scales-up, 2xl));
-          }
-        }
       }
-    }
+    };
 
-    &:nth-child(3) {
-      $top: 194px;
-      $left: 175px;
-      $w: 383px;
-
-      background-image: url('../assets/imgs/jumbotron-w-3.jpg');
-
-      @include scale((
-        top: $top,
-        left: $left,
-        width: $w,
-        height: 210px,
-        background-size: $w,
-      ));
-
-      @include bp-up(lg) {
-        @media (max-height: 968px * map-get($scales-up, lg)) {
-          top: $top - (100px * map-get($scales-up, lg));
-        }
-      }
-
-      @include bp-up(xl) {
-        @media (max-height: 968px * map-get($scales-up, xl)) {
-          top: $top - (100px * map-get($scales-up, xl));
-        }
-      }
-
-      @include bp-up(2xl) {
-        @media (max-height: 968px * map-get($scales-up, 2xl)) {
-          top: $top - (100px * map-get($scales-up, 2xl));
-        }
-      }
-
-      &:hover {
-        @include scale((
-          top: $top + 10px,
-          left: $left - 75px,
-          width: $w + 75px,
-        ));
-
-        @include bp-up(lg) {
-          @media (max-height: 968px * map-get($scales-up, lg)) {
-            top: $top - ((100px - 10px) * map-get($scales-up, lg));
-          }
-        }
-
-        @include bp-up(xl) {
-          @media (max-height: 968px * map-get($scales-up, xl)) {
-            top: $top - ((100px - 10px) * map-get($scales-up, xl));
-          }
-        }
-
-        @include bp-up(2xl) {
-          @media (max-height: 968px * map-get($scales-up, 2xl)) {
-            top: $top - ((100px - 10px) * map-get($scales-up, 2xl));
-          }
-        }
-      }
-    }
-
-    &:nth-child(4) {
-      $top: 226px;
-      $left: 236px;
-      $w: 356px;
-
-      background-image: url('../assets/imgs/jumbotron-w-4.jpg');
-
-      @include scale((
-        top: $top,
-        left: $left,
-        width: $w,
-        height: 223px,
-        background-size: $w,
-      ));
-
-      @include bp-up(lg) {
-        @media (max-height: 968px * map-get($scales-up, lg)) {
-          top: $top - (100px * map-get($scales-up, lg));
-        }
-      }
-
-      @include bp-up(xl) {
-        @media (max-height: 968px * map-get($scales-up, xl)) {
-          top: $top - (100px * map-get($scales-up, xl));
-        }
-      }
-
-      @include bp-up(2xl) {
-        @media (max-height: 968px * map-get($scales-up, 2xl)) {
-          top: $top - (100px * map-get($scales-up, 2xl));
-        }
-      }
-
-      &:hover {
-        @include scale((
-          top: $top + 10px,
-          left: $left - 75px,
-          width: $w + 75px,
-        ));
-
-        @include bp-up(lg) {
-          @media (max-height: 968px * map-get($scales-up, lg)) {
-            top: $top - ((100px - 10px) * map-get($scales-up, lg));
-          }
-        }
-
-        @include bp-up(xl) {
-          @media (max-height: 968px * map-get($scales-up, xl)) {
-            top: $top - ((100px - 10px) * map-get($scales-up, xl));
-          }
-        }
-
-        @include bp-up(2xl) {
-          @media (max-height: 968px * map-get($scales-up, 2xl)) {
-            top: $top - ((100px - 10px) * map-get($scales-up, 2xl));
-          }
-        }
-      }
-    }
+    // &:nth-child(1) {
+    //   $top: 136px;
+    //   $left: 75px;
+    //   $w: 392px;
+    //
+    //   background-image: url('../assets/imgs/jumbotron-w-1.jpg');
+    //
+    //   @include scale((
+    //     top: $top,
+    //     left: $left,
+    //     width: $w,
+    //     height: 210px,
+    //     background-size: $w,
+    //   ));
+    //
+    //   @include bp-up(lg) {
+    //     @media (max-height: 968px * map-get($scales-up, lg)) {
+    //       top: $top - (100px * map-get($scales-up, lg));
+    //     }
+    //   }
+    //
+    //   @include bp-up(xl) {
+    //     @media (max-height: 968px * map-get($scales-up, xl)) {
+    //       top: $top - (100px * map-get($scales-up, xl));
+    //     }
+    //   }
+    //
+    //   @include bp-up(2xl) {
+    //     @media (max-height: 968px * map-get($scales-up, 2xl)) {
+    //       top: $top - (100px * map-get($scales-up, 2xl));
+    //     }
+    //   }
+    //
+    //   &:hover {
+    //     @include scale((
+    //       top: $top + 10px,
+    //       left: $left - 75px,
+    //       width: $w + 75px,
+    //     ));
+    //
+    //     @include bp-up(lg) {
+    //       @media (max-height: 968px * map-get($scales-up, lg)) {
+    //         top: $top - ((100px - 10px) * map-get($scales-up, lg));
+    //       }
+    //     }
+    //
+    //     @include bp-up(xl) {
+    //       @media (max-height: 968px * map-get($scales-up, xl)) {
+    //         top: $top - ((100px - 10px) * map-get($scales-up, xl));
+    //       }
+    //     }
+    //
+    //     @include bp-up(2xl) {
+    //       @media (max-height: 968px * map-get($scales-up, 2xl)) {
+    //         top: $top - ((100px - 10px) * map-get($scales-up, 2xl));
+    //       }
+    //     }
+    //   }
+    // }
+    //
+    // &:nth-child(2) {
+    //   $top: 167px;
+    //   $left: 117px;
+    //   $w: 375px;
+    //
+    //   background-image: url('../assets/imgs/jumbotron-w-2.jpg');
+    //
+    //   @include scale((
+    //     top: $top,
+    //     left: $left,
+    //     width: $w,
+    //     height: 214px,
+    //     background-size: $w,
+    //   ));
+    //
+    //   @include bp-up(lg) {
+    //     @media (max-height: 968px * map-get($scales-up, lg)) {
+    //       top: $top - (100px * map-get($scales-up, lg));
+    //     }
+    //   }
+    //
+    //   @include bp-up(xl) {
+    //     @media (max-height: 968px * map-get($scales-up, xl)) {
+    //       top: $top - (100px * map-get($scales-up, xl));
+    //     }
+    //   }
+    //
+    //   @include bp-up(2xl) {
+    //     @media (max-height: 968px * map-get($scales-up, 2xl)) {
+    //       top: $top - (100px * map-get($scales-up, 2xl));
+    //     }
+    //   }
+    //
+    //   &:hover {
+    //     @include scale((
+    //       top: $top + 10px,
+    //       left: $left - 75px,
+    //       width: $w + 75px,
+    //     ));
+    //
+    //     @include bp-up(lg) {
+    //       @media (max-height: 968px * map-get($scales-up, lg)) {
+    //         top: $top - ((100px - 10px) * map-get($scales-up, lg));
+    //       }
+    //     }
+    //
+    //     @include bp-up(xl) {
+    //       @media (max-height: 968px * map-get($scales-up, xl)) {
+    //         top: $top - ((100px - 10px) * map-get($scales-up, xl));
+    //       }
+    //     }
+    //
+    //     @include bp-up(2xl) {
+    //       @media (max-height: 968px * map-get($scales-up, 2xl)) {
+    //         top: $top - ((100px - 10px) * map-get($scales-up, 2xl));
+    //       }
+    //     }
+    //   }
+    // }
+    //
+    // &:nth-child(3) {
+    //   $top: 194px;
+    //   $left: 175px;
+    //   $w: 383px;
+    //
+    //   background-image: url('../assets/imgs/jumbotron-w-3.jpg');
+    //
+    //   @include scale((
+    //     top: $top,
+    //     left: $left,
+    //     width: $w,
+    //     height: 210px,
+    //     background-size: $w,
+    //   ));
+    //
+    //   @include bp-up(lg) {
+    //     @media (max-height: 968px * map-get($scales-up, lg)) {
+    //       top: $top - (100px * map-get($scales-up, lg));
+    //     }
+    //   }
+    //
+    //   @include bp-up(xl) {
+    //     @media (max-height: 968px * map-get($scales-up, xl)) {
+    //       top: $top - (100px * map-get($scales-up, xl));
+    //     }
+    //   }
+    //
+    //   @include bp-up(2xl) {
+    //     @media (max-height: 968px * map-get($scales-up, 2xl)) {
+    //       top: $top - (100px * map-get($scales-up, 2xl));
+    //     }
+    //   }
+    //
+    //   &:hover {
+    //     @include scale((
+    //       top: $top + 10px,
+    //       left: $left - 75px,
+    //       width: $w + 75px,
+    //     ));
+    //
+    //     @include bp-up(lg) {
+    //       @media (max-height: 968px * map-get($scales-up, lg)) {
+    //         top: $top - ((100px - 10px) * map-get($scales-up, lg));
+    //       }
+    //     }
+    //
+    //     @include bp-up(xl) {
+    //       @media (max-height: 968px * map-get($scales-up, xl)) {
+    //         top: $top - ((100px - 10px) * map-get($scales-up, xl));
+    //       }
+    //     }
+    //
+    //     @include bp-up(2xl) {
+    //       @media (max-height: 968px * map-get($scales-up, 2xl)) {
+    //         top: $top - ((100px - 10px) * map-get($scales-up, 2xl));
+    //       }
+    //     }
+    //   }
+    // }
+    //
+    // &:nth-child(4) {
+    //   $top: 226px;
+    //   $left: 236px;
+    //   $w: 356px;
+    //
+    //   background-image: url('../assets/imgs/jumbotron-w-4-no-tooltip.jpg');
+    //
+    //   @include scale((
+    //     top: $top,
+    //     left: $left,
+    //     width: $w,
+    //     height: 223px,
+    //     background-size: $w,
+    //   ));
+    //
+    //   @include bp-up(lg) {
+    //     @media (max-height: 968px * map-get($scales-up, lg)) {
+    //       top: $top - (100px * map-get($scales-up, lg));
+    //     }
+    //   }
+    //
+    //   @include bp-up(xl) {
+    //     @media (max-height: 968px * map-get($scales-up, xl)) {
+    //       top: $top - (100px * map-get($scales-up, xl));
+    //     }
+    //   }
+    //
+    //   @include bp-up(2xl) {
+    //     @media (max-height: 968px * map-get($scales-up, 2xl)) {
+    //       top: $top - (100px * map-get($scales-up, 2xl));
+    //     }
+    //   }
+    //
+    //   &:hover {
+    //     @include scale((
+    //       top: $top + 10px,
+    //       left: $left - 75px,
+    //       width: $w + 75px,
+    //     ));
+    //
+    //     @include bp-up(lg) {
+    //       @media (max-height: 968px * map-get($scales-up, lg)) {
+    //         top: $top - ((100px - 10px) * map-get($scales-up, lg));
+    //       }
+    //     }
+    //
+    //     @include bp-up(xl) {
+    //       @media (max-height: 968px * map-get($scales-up, xl)) {
+    //         top: $top - ((100px - 10px) * map-get($scales-up, xl));
+    //       }
+    //     }
+    //
+    //     @include bp-up(2xl) {
+    //       @media (max-height: 968px * map-get($scales-up, 2xl)) {
+    //         top: $top - ((100px - 10px) * map-get($scales-up, 2xl));
+    //       }
+    //     }
+    //   }
+    // }
   }
 
   &__heading {
