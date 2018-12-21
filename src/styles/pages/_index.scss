@@ -191,7 +191,7 @@
       background-size: 100%;
 
       @include bp-up(lg) {
-        background-image: linear-gradient(to left, $white 50px, transparent);
+        background-image: linear-gradient(to left, $white 50px, rgba(255, 255, 255, 0));
       }
 
       &:before {
@@ -216,7 +216,7 @@
       background-size: 100%;
 
       @include bp-up(lg) {
-        background-image: linear-gradient(to right, $white 50px, transparent);
+        background-image: linear-gradient(to right, $white 50px, rgba(255, 255, 255, 0));
       }
 
       &:before {
