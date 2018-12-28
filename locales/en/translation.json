@@ -39,7 +39,7 @@
     }
   },
   "jumbotron": {
-    "heading" : "An Open-source Desktop App to Manage Private Keys",
+    "heading" : "an open-source desktop application to manage your private keys",
     "features" : {
       "control" : "complete control over the sensitive information",
       "vault" : "a vault which never transmits private data",
