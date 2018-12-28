@@ -10,11 +10,41 @@
           <div class="col-12 col-lg-6 jumbotron__block jumbotron__block--about">
             <h1 class="text-white jumbotron__heading">{{ 'jumbotron.heading' | __ | capitalizeFirst }}</h1>
 
-            <ul class="jumbotron__features">
+            <ul class="jumbotron__features mb-6">
               <li>{{ 'jumbotron.features.control' | __ | capitalizeFirst }}</li>
               <li>{{ 'jumbotron.features.vault' | __ | capitalizeFirst }}</li>
               <li>{{ 'jumbotron.features.storage' | __ | capitalizeFirst }}</li>
             </ul>
+
+            <p class="mb-0 d-inline-flex">
+              <span class="mr-2">
+                <a class="github-button" href="https://github.com/arrayio/array-io-keychain" data-icon="octicon-star" data-show-count="true" aria-label="Star arrayio/array-io-keychain on GitHub">Star</a>
+              </span>
+
+              <span class="mr-5">
+                <a class="github-button" href="https://github.com/arrayio/array-io-keychain/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork arrayio/array-io-keychain on GitHub">Fork</a>
+              </span>
+
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="61" height="20" class="mr-2">
+                <style>
+                  a #llink:hover { fill: url("#b"); stroke: #ccc; }
+                  a #rlink:hover { fill: #4183c4; }
+                </style>
+                <lineargradient id="a" x2="0" y2="100%"><stop offset="0" stop-color="#fcfcfc" stop-opacity="0"/><stop offset="1" stop-opacity=".1"/></lineargradient>
+                <lineargradient id="b" x2="0" y2="100%"><stop offset="0" stop-color="#ccc" stop-opacity=".1"/><stop offset="1" stop-opacity=".1"/></lineargradient>
+                <g stroke="#d5d5d5"><rect stroke="none" fill="#fcfcfc" x=".5" y=".5" width="60" height="19" rx="2"/></g><image
+                  x="5"
+                  y="3"
+                  width="14"
+                  height="14"
+                  xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMzUgMjc2Ij48cGF0aCBmaWxsPSIjNTVhY2VlIiBkPSJNMzAyIDcwQTE5NSAxOTUgMCAwIDEgMyAyNDVhMTQyIDE0MiAwIDAgMCA5Ny0zMCA3MCA3MCAwIDAgMS01OC00NyA3MCA3MCAwIDAgMCAzMS0yIDcwIDcwIDAgMCAxLTU3LTY2IDcwIDcwIDAgMCAwIDI4IDUgNzAgNzAgMCAwIDEtMTgtOTAgMTk1IDE5NSAwIDAgMCAxNDEgNzIgNjcgNjcgMCAwIDEgMTE2LTYyIDExNyAxMTcgMCAwIDAgNDMtMTcgNjUgNjUgMCAwIDEtMzEgMzggMTE3IDExNyAwIDAgMCAzOS0xMSA2NSA2NSAwIDAgMS0zMiAzNSIvPjwvc3ZnPgo="/>
+                <g fill="#333" text-anchor="middle" font-family="Helvetica Neue,Helvetica,Arial,sans-serif" font-weight="700" font-size="110">
+                  <text x="385" y="150" fill="#fff" transform="scale(.1)" textlength="330">Tweet</text>
+                  <text x="385" y="140" transform="scale(.1)" textlength="330">Tweet</text>
+                </g>
+                <a target="_blank" xlink:href="//twitter.com/intent/tweet?text=A%20good,%20solid%20app%20to%20keep%20your%20keys%20safe.&url=https://keychain.array.io/&via=ProjectArray&hashtags=cybersecurity,private,cryptography,blockchain,app"><rect id="llink" stroke="#d5d5d5" fill="url(#a)" x=".5" y=".5" width="60" height="19" rx="2"/></a>
+              </svg>
+            </p>
           </div>
 
           <div class="col-lg-6 jumbotron__block jumbotron__block--windows">
