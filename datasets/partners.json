@@ -6,12 +6,6 @@
     "icon" : "icoadmin"
   },
   {
-    "id" : "velvet",
-    "_key" : "partners.velvet",
-    "ref" : "//velvet.exchange",
-    "icon" : "velvet"
-  },
-  {
     "id" : "swap",
     "_key" : "partners.swap",
     "ref" : "//swap.online",
