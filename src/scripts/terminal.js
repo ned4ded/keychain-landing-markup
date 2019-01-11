@@ -377,11 +377,11 @@ $( document ).ready(() => {
   const OS = {
     'Mac OS X' : {
       name: 'macOS',
-      ref: '#'
+      ref: '//github.com/arrayio/array-io-keychain/releases/download/0.13/KeyChain.Installer.maOS.zip'
     },
     'Windows' : {
       name: 'Windows',
-      ref: '#'
+      ref: '//github.com/arrayio/array-io-keychain/releases/download/0.13/keychain.msi'
     },
     'Linux' : {
       name: 'Linux',
