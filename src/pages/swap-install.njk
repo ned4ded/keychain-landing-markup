@@ -2,6 +2,14 @@
 
 {% extends "layout.njk" %}
 
+{% block links %}
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+{% endblock %}
+
+{% block header %}
+  {% include "partials/swap-header.njk" %}
+{% endblock %}
+
 {% block content %}
 <div class="container-fluid page-install__content">
   <div class="row">
@@ -40,4 +48,9 @@
     </div>
   </div>
 </div>
+{% endblock %}
+
+
+{% block footer %}
+  {% include "partials/swap-footer.njk" %}
 {% endblock %}

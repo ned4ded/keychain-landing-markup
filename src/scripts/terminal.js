@@ -377,7 +377,7 @@ $( document ).ready(() => {
   const OS = {
     'Mac OS X' : {
       name: 'macOS',
-      ref: '//github.com/arrayio/array-io-keychain/releases/download/0.14/KeyChain.Installer.macOS.zip'
+      ref: '//github.com/arrayio/array-io-keychain/releases/download/0.15/KeyChain.Installer.zip'
     },
     'Windows' : {
       name: 'Windows',
