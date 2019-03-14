@@ -295,6 +295,13 @@
         margin: 0 $li-p-x;
       }
     }
+
+    &-img {
+      width: 100%;
+      max-width: 800px;
+      height: auto;
+      margin: auto;
+    }
   }
 
   &__security {

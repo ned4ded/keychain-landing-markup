@@ -27,8 +27,7 @@
     },
     "secure" : {
       "name" : "secure",
-      "descr" : "Allow your users to store their private keys encrypted by AES256 algorithm, three security layers, entropy and master keys
-"
+      "descr" : "Allow your users to store their private keys encrypted by AES256 algorithm, three security layers, entropy and master keys"
     },
     "isolated" : {
       "name" : "isolated",
@@ -36,8 +35,7 @@
     },
     "friend" : {
       "name" : "friendly",
-      "descr" : "The Keychain API easily integrates with any project no matter what language you choose for development
-"
+      "descr" : "The Keychain API easily integrates with any project no matter what language you choose for development"
     }
   },
   "jumbotron": {
@@ -71,6 +69,7 @@
       "headings" : {
         "features": "key features",
         "qualities": "a perfect solution for blockchain-based projects",
+        "integrate-example": "a perfect solution for blockchain-based projects",
         "testimonials" : "customer testimonials",
         "integration" : "ready to integrate?",
         "security" : "OS-specific security"
