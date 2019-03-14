@@ -42,7 +42,7 @@
     "heading" : "An open-source desktop application that protects your clients’ private keys",
     "features" : {
       "control" : "Ensure safety and effortless key management for your clients",
-      "vault" : "Integrate fast and easy with comprehensive API, guides, and plug-ins",
+      "vault" : "Integrate fast and easy with comprehensive API, guides, and plugins",
       "storage" : "Guarantee your users secure Bitcoin and Ethereum transactions"
     },
     "layers" : {
