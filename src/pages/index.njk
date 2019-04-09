@@ -61,6 +61,24 @@
 
     <div class="col-12 mb-7 mb-lg-9">
       <h2 class="text-center font-weight-bold mb-4 mb-lg-6">
+        {{ 'pages.home.headings.integration-steps' | __ | capitalizeFirst }}
+      </h2>
+
+      <ul class="page-home__steps">
+        {% set steps = datasets.get('integration') %}
+
+          {% for s in steps %}
+          <li>
+            <a href="{{ s.href }}" class="page-home__steps-link page-home__steps-link--{{ s.name }}">
+              {{ s._p | __ | capitalizeFirst | safe }}
+            </a>
+          </li>
+          {% endfor %}
+        </ul>
+    </div>
+
+    <div class="col-12 mb-7 mb-lg-9">
+      <h2 class="text-center font-weight-bold mb-4 mb-lg-6">
         {{ 'pages.home.headings.integrate-example' | __ | capitalizeFirst }}
       </h2>
 

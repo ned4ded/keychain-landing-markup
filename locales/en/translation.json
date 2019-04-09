@@ -72,17 +72,18 @@
         "integrate-example": "integrate through Pipe or WebSockets",
         "testimonials" : "customer testimonials",
         "integration" : "ready to integrate?",
-        "security" : "OS-specific security"
+        "security" : "OS-specific security",
+        "integration-steps": "A smooth integration with your blockchain project"
       },
       "paragraphs" : {
         "about" : "<b>KeyChain</b> is a cyber security integration software for protecting private keys in any signature-dependent system. It has a user interface for signing transactions, generating and managing hierarchically-derived keys. KeyChain supports Bitcoin and Ethereum transactions, expanding fast to include Litecoin, Ethereum Classic, Bitcoin Cash, and Bitshares.",
         "qualities" : {
-          "protocol" : "instead of losing time to build the protocol for storing user’s private keys, use the KeyChain",
+          "protocol" : "instead of losing time to build the protocol for storing user’s private keys, use KeyChain",
           "code" : "our code is open-source and available to you now",
           "offer" : "offer truly decentralized product for Web.3 and change the world of institutional control"
         },
         "security" : {
-          "about" : "We look past standard solutions to data protection. As is well-known, the longer the path, the more chances there are of passwords being intercepted. To ensure safe operations in Unix-like OS, we have created a shortcut from you entering a passphrase to the KeyChain processing it. To protect Windows users, we employ the mechanism that allows the processes to run separately without letting any one of them to interfere with another - a technology that is inherent to macOS."
+          "about" : "We look past standard solutions to data protection. As is well-known, the longer the path, the more chances there are of passwords being intercepted. To ensure safe operations in Unix-like OS, we have created a shortcut from you entering a passphrase to the KeyChain processing it. At this moment KeyChain team is focused on macOS version. In the nearest future we plan to ensure safe operations on Windows and Linux as well."
         },
         "testimonials" : {
           "question" : "what did they say about our products?"
@@ -94,6 +95,11 @@
             "websocket" : "WebSocket API",
             "pipe" :  "Pipe API"
           }
+        },
+        "integration-steps": {
+          "app": "install KeyChain for <span>macOS</span>",
+          "demo": "check if KeyChain is installed on the <span>demo-page</span>",
+          "lib": "install <span>keychain.js</span> library to use it with web3"
         }
       }
     }

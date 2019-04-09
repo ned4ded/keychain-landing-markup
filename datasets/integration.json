@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "app",
+    "href": "//github.com/arrayio/array-io-keychain/releases/tag/0.27",
+    "_p" : "pages.home.paragraphs.integration-steps.app"
+  },
+  {
+    "id": 2,
+    "name": "demo",
+    "href": "//arrayio.github.io/array-io-keychain/demo/",
+    "_p" : "pages.home.paragraphs.integration-steps.demo"
+  },
+  {
+    "id": 3,
+    "name": "lib",
+    "href": "//www.npmjs.com/package/keychain.js",
+    "_p" : "pages.home.paragraphs.integration-steps.lib"
+  }
+]

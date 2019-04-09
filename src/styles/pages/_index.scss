@@ -452,4 +452,114 @@
       }
     }
   }
+
+  &__steps {
+    display: flex;
+    flex-flow: row nowrap;
+
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    justify-content: space-around;
+
+    li {
+      width: auto;
+
+      text-align: center;
+    }
+
+    &-link {
+      position: relative;
+
+      display: block;
+
+      width: 100%;
+      margin: 0 auto;
+
+      color: $body-color;
+
+      @include scale((
+        font-size: $h3-font-size,
+        padding-top: 268px,
+        max-width: 385px,
+        min-width: 230px,
+      ))
+
+      span {
+        transition: all ease-in .3s;
+      }
+
+      &:before {
+        position: absolute;
+        top: 0;
+        left: 50%;
+
+        display: block;
+
+        content: '';
+        transition: background-color ease-in .3s;
+        transform: translateX(-50%);
+
+        border-radius: 100%;
+        background-color: theme-color();
+
+        @include scale((
+          width: 230px,
+          height: 230px,
+        ))
+      }
+
+      &:hover {
+        text-decoration: none;
+
+        color: $body-color;
+
+        span {
+          transition-duration: .0s;
+          text-decoration: underline;
+
+          color: theme-color('contrast');
+        }
+
+        &:before {
+          transition-duration: .0s;
+
+          background-color: theme-color('contrast');
+        }
+      }
+
+      &--app {
+        &:before {
+          background-image: url('../assets/imgs/integration-step-1.png');
+          background-repeat: no-repeat;
+          background-position: center 103%;
+          background-size: auto;
+        }
+      }
+
+      &--demo {
+        @include scale((
+          max-width: 416px,
+        ))
+
+        &:before {
+          background-image: url('../assets/imgs/integration-step-2.png');
+          background-repeat: no-repeat;
+          background-position: center 103%;
+          background-size: auto;
+        }
+      }
+
+      &--lib {
+        &:before {
+          background-image: url('../assets/imgs/integration-step-3.png');
+          background-repeat: no-repeat;
+          background-position: center 103%;
+          background-size: auto;
+        }
+      }
+    }
+  }
 }
