@@ -454,20 +454,31 @@
   }
 
   &__steps {
-    display: flex;
-    flex-flow: row nowrap;
-
     margin: 0;
     padding: 0;
 
     list-style: none;
 
-    justify-content: space-around;
+    @include bp-up(lg) {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-around;
+    }
 
     li {
       width: auto;
 
       text-align: center;
+
+      margin-bottom: spacer(4);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      @include bp-up(lg) {
+        margin-bottom: 0;
+      }
     }
 
     &-link {
@@ -482,13 +493,14 @@
 
       @include scale((
         font-size: $h3-font-size,
-        padding-top: 268px,
+        padding-top: 245px,
         max-width: 385px,
-        min-width: 230px,
+        min-width: 200px,
       ))
 
       span {
         transition: all ease-in .3s;
+        text-decoration: underline;
       }
 
       &:before {
@@ -506,8 +518,8 @@
         background-color: theme-color();
 
         @include scale((
-          width: 230px,
-          height: 230px,
+          width: 190px,
+          height: 190px,
         ))
       }
 
@@ -532,10 +544,26 @@
 
       &--app {
         &:before {
+          $q: .85;
+          $bg-w: 78px * $q;
+          $bg-h: 188px * $q;
+
           background-image: url('../assets/imgs/integration-step-1.png');
           background-repeat: no-repeat;
           background-position: center 103%;
-          background-size: auto;
+          background-size: $bg-w $bg-h;
+
+          @include bp-up(lg) {
+            background-size: #{$bg-w * map-get($scales-up, lg)} #{$bg-h * map-get($scales-up, lg)};
+          }
+
+          @include bp-up(xl) {
+            background-size: #{$bg-w * map-get($scales-up, xl)} #{$bg-h * map-get($scales-up, xl)};
+          }
+
+          @include bp-up(2xl) {
+            background-size: #{$bg-w * map-get($scales-up, 2xl)} #{$bg-h * map-get($scales-up, 2xl)};
+          }
         }
       }
 
@@ -545,19 +573,51 @@
         ))
 
         &:before {
+          $q: .85;
+          $bg-w: 112px * $q;
+          $bg-h: 188px * $q;
+
           background-image: url('../assets/imgs/integration-step-2.png');
           background-repeat: no-repeat;
           background-position: center 103%;
-          background-size: auto;
+          background-size: $bg-w $bg-h;
+
+          @include bp-up(lg) {
+            background-size: #{$bg-w * map-get($scales-up, lg)} #{$bg-h * map-get($scales-up, lg)};
+          }
+
+          @include bp-up(xl) {
+            background-size: #{$bg-w * map-get($scales-up, xl)} #{$bg-h * map-get($scales-up, xl)};
+          }
+
+          @include bp-up(2xl) {
+            background-size: #{$bg-w * map-get($scales-up, 2xl)} #{$bg-h * map-get($scales-up, 2xl)};
+          }
         }
       }
 
       &--lib {
         &:before {
+          $q: .85;
+          $bg-w: 112px * $q;
+          $bg-h: 188px * $q;
+
           background-image: url('../assets/imgs/integration-step-3.png');
           background-repeat: no-repeat;
-          background-position: center 103%;
-          background-size: auto;
+          background-position: center 105%;
+          background-size: $bg-w $bg-h;
+
+          @include bp-up(lg) {
+            background-size: #{$bg-w * map-get($scales-up, lg)} #{$bg-h * map-get($scales-up, lg)};
+          }
+
+          @include bp-up(xl) {
+            background-size: #{$bg-w * map-get($scales-up, xl)} #{$bg-h * map-get($scales-up, xl)};
+          }
+
+          @include bp-up(2xl) {
+            background-size: #{$bg-w * map-get($scales-up, 2xl)} #{$bg-h * map-get($scales-up, 2xl)};
+          }
         }
       }
     }
