@@ -49,8 +49,10 @@
     flex-flow: row wrap;
 
     margin: -$m 0;
+    padding: 0;
 
     list-style: none;
+
 
     @include bp-up(lg) {
       justify-content: space-around;
@@ -466,7 +468,7 @@
     }
 
     li {
-      width: auto;
+      width: 100%;
 
       text-align: center;
 
@@ -477,11 +479,14 @@
       }
 
       @include bp-up(lg) {
+        width: 33.333%;
         margin-bottom: 0;
       }
     }
 
     &-link {
+      $q-link: .75;
+
       position: relative;
 
       display: block;
@@ -493,9 +498,9 @@
 
       @include scale((
         font-size: $h3-font-size,
-        padding-top: 245px,
+        padding-top: 245px * $q-link,
         max-width: 385px,
-        min-width: 200px,
+        min-width: 190px * $q-link,
       ))
 
       span {
@@ -503,7 +508,8 @@
         text-decoration: underline;
       }
 
-      &:before {
+      &:before,
+      &:after {
         position: absolute;
         top: 0;
         left: 50%;
@@ -511,16 +517,19 @@
         display: block;
 
         content: '';
-        transition: background-color ease-in .3s;
         transform: translateX(-50%);
+
+        @include scale((
+          width: 190px * $q-link,
+          height: 190px * $q-link,
+        ))
+      }
+
+      &:before {
+        transition: background-color ease-in .3s;
 
         border-radius: 100%;
         background-color: theme-color();
-
-        @include scale((
-          width: 190px,
-          height: 190px,
-        ))
       }
 
       &:hover {
@@ -543,14 +552,14 @@
       }
 
       &--app {
-        &:before {
+        &:after {
           $q: .85;
-          $bg-w: 78px * $q;
-          $bg-h: 188px * $q;
+          $bg-w: 78px * $q * $q-link;
+          $bg-h: 188px * $q * $q-link;
 
           background-image: url('../assets/imgs/integration-step-1.png');
           background-repeat: no-repeat;
-          background-position: center 103%;
+          background-position: center 105%;
           background-size: $bg-w $bg-h;
 
           @include bp-up(lg) {
@@ -568,18 +577,14 @@
       }
 
       &--demo {
-        @include scale((
-          max-width: 416px,
-        ))
-
-        &:before {
+        &:after {
           $q: .85;
-          $bg-w: 112px * $q;
-          $bg-h: 188px * $q;
+          $bg-w: 112px * $q * $q-link;
+          $bg-h: 188px * $q * $q-link;
 
           background-image: url('../assets/imgs/integration-step-2.png');
           background-repeat: no-repeat;
-          background-position: center 103%;
+          background-position: center 105%;
           background-size: $bg-w $bg-h;
 
           @include bp-up(lg) {
@@ -597,10 +602,10 @@
       }
 
       &--lib {
-        &:before {
+        &:after {
           $q: .85;
-          $bg-w: 112px * $q;
-          $bg-h: 188px * $q;
+          $bg-w: 112px * $q * $q-link;
+          $bg-h: 188px * $q * $q-link;
 
           background-image: url('../assets/imgs/integration-step-3.png');
           background-repeat: no-repeat;
